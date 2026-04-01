@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>D.R. Karigowda College of Pharmacy | Clinical Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#d9dadb",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-background": "#191c1d",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "on-tertiary-container": "#979898",
+                        "surface-container": "#edeeef",
+                        "surface-tint": "#4c56af",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "on-primary-fixed-variant": "#343d96",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "outline-variant": "#c6c5d4",
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-surface-variant": "#454652",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed": "#000767",
+                        "outline": "#767683",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#000666",
+                        "background": "#f8f9fa",
+                        "primary-fixed": "#e0e0ff",
+                        "secondary": "#008080",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary-container": "#1a237e",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#2f3030",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "tertiary": "#1a1b1c",
+                        "secondary-fixed": "#93f2f2",
+                        "secondary-container": "#90efef",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#bdc2ff",
+                        "secondary-fixed-dim": "#76d6d5",
+                        "surface-variant": "#e1e3e4",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#8690ee",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1d",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#006e6e",
+                        "on-secondary-fixed": "#002020",
+                        "inverse-surface": "#2e3132"
+                    },
+                    fontFamily: {
+                        "headline": ["Playfair Display"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .clinical-gradient {
+            background: linear-gradient(135deg, #000666 0%, #1a237e 100%);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .medical-pattern {
+            background-image: radial-gradient(#008080 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Section 1: Hero Header -->
+<header class="relative h-screen w-full overflow-hidden flex flex-col justify-between">
+<!-- TopNavBar (Shared Component Translation) -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="font-headline italic text-xl font-bold text-primary-container tracking-tight">D.R.K.C.P.</div>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary border-b-2 border-secondary pb-1 font-medium transition-all" href="index.html">Home</a>
+<a class="text-outline hover:text-primary-container transition-colors" href="faculty.html">Faculty &amp; Leadership</a>
+<a class="text-outline hover:text-primary-container transition-colors" href="academics.html">Academics &amp; Careers</a>
+<a class="text-outline hover:text-primary-container transition-colors" href="campus-life.html">Campus Life &amp; Support</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-medium hover:bg-primary-container transition-all active:scale-95 shadow-lg shadow-primary/20">
+                        Apply Now
+                    </button>
+</div>
+</div>
+</nav>
+<!-- Hero Content -->
+<div class="relative flex-grow flex items-center justify-center pt-20 px-8 text-center">
+<div class="absolute inset-0 z-0">
+<img alt="Laboratory focus" class="w-full h-full object-cover" data-alt="Cinematic wide shot of a modern pharmaceutical research laboratory with soft teal lighting and focused researchers in white coats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHq63Kfz8tzZLULuEIoqQ8h6XJ42tRmD_7_o3Tzd_4jdDriwGc31eqYFz4F_4AMQ1xeTtItKx2YGw497mDnO6LtbA7e_EADB6RRNQKMONB4kFD9KmIwzUgyX4_mz8nYJBQvLczAvfsbIB8gtksDcCZADMhuGHY-36clwumB3qyVNfHQ6mODI5LhiDfALnbqKTp8Ji-CcCfDn9t8TVmz1zbD_lHFExFeFd_skBS78NvaJy1ZG51T0n3AyYs5n4eXzFoxwzXQ_w4Gslp"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px]"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-surface"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<p class="text-secondary-fixed font-medium tracking-[0.2em] uppercase text-sm mb-6">NDRK Group of Institutions</p>
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    D.R. Karigowda College <br/>of <span class="italic font-normal">Pharmacy</span>
+</h1>
+<p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    Pioneering Excellence since 2004. Cultivating the next generation of clinical leaders and pharmaceutical innovators.
+                </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-secondary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-secondary/30 transition-all">
+                        Explore Programs
+                    </button>
+<button class="border border-white/30 backdrop-blur-md text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all">
+                        Virtual Tour
+                    </button>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="relative z-10 pb-12 flex justify-center">
+<div class="flex flex-col items-center gap-2">
+<span class="text-outline text-xs uppercase tracking-[0.3em]">Scroll Down</span>
+<div class="w-px h-12 bg-gradient-to-b from-secondary to-transparent animate-bounce"></div>
+</div>
+</div>
+</header>
+<!-- Section 2: Brand Story -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/5 rounded-2xl transition-all group-hover:scale-105 duration-700"></div>
+<img alt="Pharmacy student" class="relative rounded-xl shadow-2xl w-full h-[600px] object-cover" data-alt="Professional close-up of a pharmacy student in a white lab coat meticulously examining a microscope slide in a brightly lit technical lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDUm_NQ-QKG08onl-57f4gYtrSJrMdUVjK835xixLZoRBu6AbnKmx925Uw7iCXXJqkV4tJlIzTnuEWvmnLxANTSTUGaRwuAaEe6zunvBIstCwCNoePGo0LCg1WhcdmmP7PpE5g224YM1EgGDJrcKHb4-EHjPfbup0yfUlmLY2xzqfeHsZ5Z25oLUxVRyPVRtjpUnpEmgta2wiBdAm_3PzUu5ZqI5qcDbUFGTaNq0hfTbJXE4X7CqHrcBJA79Wdh3HYzvZm1mj5NM6u"/>
+<div class="absolute bottom-8 right-8 bg-white p-6 rounded-lg shadow-xl max-w-xs border-l-4 border-secondary">
+<p class="font-headline italic text-lg text-primary">"Education is not the learning of facts, but the training of the mind to think."</p>
+</div>
+</div>
+<div class="space-y-10">
+<div>
+<h2 class="text-secondary font-semibold tracking-widest text-sm uppercase mb-4">The Clinical Curator</h2>
+<h3 class="font-headline text-4xl md:text-5xl text-primary-container leading-tight">What Makes Us <span class="italic">Unique?</span></h3>
+</div>
+<div class="grid gap-8">
+<div class="flex gap-6 items-start">
+<div class="bg-secondary-container p-3 rounded-lg text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl" data-icon="clinical_notes">clinical_notes</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-primary mb-2">Academic Excellence</h4>
+<p class="text-outline leading-relaxed">Our curriculum is precision-engineered to bridge the gap between theoretical knowledge and clinical application.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-secondary-container p-3 rounded-lg text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl" data-icon="biotech">biotech</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-primary mb-2">Research Foundation</h4>
+<p class="text-outline leading-relaxed">State-of-the-art facilities dedicated to critical thinking and healthcare innovation through evidence-based research.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-secondary-container p-3 rounded-lg text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl" data-icon="groups">groups</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-primary mb-2">Professional Development</h4>
+<p class="text-outline leading-relaxed">Fostering leadership skills that prepare our students for the global pharmaceutical industry.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Academic Programs -->
+<section class="py-24 bg-surface-container-low relative overflow-hidden">
+<div class="absolute inset-0 medical-pattern"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl md:text-5xl text-primary-container mb-4">Academic Programs</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Program Card 1 -->
+<div class="group bg-surface-container-lowest p-10 rounded-xl transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:bg-secondary relative overflow-hidden">
+<div class="relative z-10">
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mb-8 group-hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary group-hover:text-white" data-icon="vaccines">vaccines</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-4 group-hover:text-white transition-colors">D.Pharm</h3>
+<p class="text-outline mb-8 group-hover:text-white/80 transition-colors">A robust 2-year foundation in pharmaceutical sciences for clinical practice.</p>
+<button class="opacity-0 group-hover:opacity-100 flex items-center gap-2 text-white font-semibold transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                            View Curriculum <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="absolute bottom-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-9xl" data-icon="medical_services">medical_services</span>
+</div>
+</div>
+<!-- Program Card 2 -->
+<div class="group bg-surface-container-lowest p-10 rounded-xl transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:bg-secondary relative overflow-hidden">
+<div class="relative z-10">
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mb-8 group-hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary group-hover:text-white" data-icon="pill">pill</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-4 group-hover:text-white transition-colors">B.Pharm</h3>
+<p class="text-outline mb-8 group-hover:text-white/80 transition-colors">Comprehensive 4-year undergraduate study exploring drug discovery and delivery.</p>
+<button class="opacity-0 group-hover:opacity-100 flex items-center gap-2 text-white font-semibold transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                            View Curriculum <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="absolute bottom-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-9xl" data-icon="dna">genetics</span>
+</div>
+</div>
+<!-- Program Card 3 -->
+<div class="group bg-surface-container-lowest p-10 rounded-xl transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:bg-secondary relative overflow-hidden">
+<div class="relative z-10">
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mb-8 group-hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary group-hover:text-white" data-icon="science">science</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-4 group-hover:text-white transition-colors">M.Pharm</h3>
+<p class="text-outline mb-8 group-hover:text-white/80 transition-colors">Advanced specialization and research-focused postgraduate studies.</p>
+<button class="opacity-0 group-hover:opacity-100 flex items-center gap-2 text-white font-semibold transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                            View Curriculum <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="absolute bottom-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-9xl" data-icon="experiment">experiment</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Testimonials -->
+<section class="py-24 px-8 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-secondary font-semibold tracking-widest text-sm uppercase mb-4">Voice of DRKCP</h2>
+<h3 class="font-headline text-4xl text-primary-container leading-tight">Alumni &amp; Student <span class="italic">Success</span></h3>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Testimonial 1 -->
+<div class="relative p-8 bg-surface-container-lowest rounded-xl shadow-lg border-t-4 border-secondary">
+<div class="absolute -top-6 left-8 flex items-center">
+<div class="relative">
+<img alt="Alumni Portrait" class="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover" data-alt="Professional studio headshot of a female pharmacist with a warm smile, wearing clinical attire, circular crop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGXGWh7CUCtCzXdnnUsLwqyBhCvU6fK64894QvQb0JTSGocybgXRgxUjr1lBiG5XJlNAMHp-y--WOmYzUSmoLjHyKzAx5Y4whmn2rXlNAIuzB16QNw29EA4SBephir_A3JXl1kMBSt5rGYTLwD6oav5gaRdhFoIPVNLb5JCQ7WrUT9_nrgdLx4jMIqLwOUazeAomd6xyb70_ws2M9L4ebclHOT_ZyzSjHqpJ7kkjPhTSdcfvwtdaCM9VeBWkp_Pp70yueMKeWE-yM6"/>
+<span class="absolute bottom-0 right-0 bg-secondary text-white p-1 rounded-full text-[10px] flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[12px]" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+</div>
+<div class="mt-8">
+<div class="flex gap-1 text-secondary-fixed-dim mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic leading-relaxed mb-6">"The research-centric environment at Karigowda College helped me develop the precision required for my current role at a global pharmaceutical firm."</p>
+<div>
+<p class="font-bold text-primary">Ananya Sharma</p>
+<p class="text-xs text-outline uppercase tracking-wider">Clinical Researcher, Pfizer</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 (Active Style) -->
+<div class="relative p-8 bg-white rounded-xl shadow-2xl border-t-4 border-secondary scale-105 z-10">
+<div class="absolute -inset-2 bg-secondary/5 blur-2xl -z-10 rounded-full"></div>
+<div class="absolute -top-6 left-8 flex items-center">
+<div class="relative">
+<img alt="Alumni Portrait" class="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover" data-alt="Candid professional portrait of a young male pharmacist in a modern pharmacy setting, smiling, circular crop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtM8F8ylX2LvkOjxu5bqr69xHa75jqgxoLDLL5XLuAopE5LiWwNAqNY85in3BK_lT_-oMTJKP0n7fLIesXDMHirEXZspkAs2KEbvXkKWFHabkxnfdM8hDsZdyp2qsFIhyI2jl4r3m4S2w-WlXo_ukVB6mzKjJzvr9UHETgSE8t5TfwmGz3hjtx8zOSxpV7y3hVj_6t3LF9POBGORa1nBAdKf6TMmewBydmMDEx2BZQLG5HaOvddRFvGJwkQpNQRPR2t-rgLQyCm7uf"/>
+<span class="absolute bottom-0 right-0 bg-secondary text-white p-1 rounded-full text-[10px] flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[12px]" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+</div>
+<div class="mt-8">
+<div class="flex gap-1 text-secondary mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-primary font-medium italic leading-relaxed mb-6">"Pioneering excellence is not just a tagline here—it's a daily practice. The faculty's mentorship is unparalleled."</p>
+<div>
+<p class="font-bold text-primary">Rahul Mehta</p>
+<p class="text-xs text-outline uppercase tracking-wider">M.Pharm Scholar, 2024</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="relative p-8 bg-surface-container-lowest rounded-xl shadow-lg border-t-4 border-secondary">
+<div class="absolute -top-6 left-8 flex items-center">
+<div class="relative">
+<img alt="Alumni Portrait" class="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover" data-alt="Professional studio portrait of a confident female alumni pharmacist, wearing academic graduation stole, circular crop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADQ9jxbrtwWuKtfIUY6jX9G7jmLpP7pe7RBsiudtmDM8IJSbBjZaCP8hCAnEeUBd2QWyr8kQhnW7IlppjY85LojFsOyF7Z4a2HLqo9b6km10jMPJCz3wMG8-YMQXpiAyNFjJiazr4Zi_aYJ0LSM1t6uwAJPaENeNYdurucLZCpjuvyKO9fDohomCv2u8Pwhp63KekcmoM1sFQIHI1HtOIw2q-dQYScIt5ZD5wl40_2AkHYYj-ZbN4LPuQCMgQixl25anXTCD4nBUGB"/>
+<span class="absolute bottom-0 right-0 bg-secondary text-white p-1 rounded-full text-[10px] flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[12px]" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+</div>
+<div class="mt-8">
+<div class="flex gap-1 text-secondary-fixed-dim mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic leading-relaxed mb-6">"The transition from college to industry was seamless thanks to the high-tech lab training we received."</p>
+<div>
+<p class="font-bold text-primary">Sanya Iyer</p>
+<p class="text-xs text-outline uppercase tracking-wider">Quality Control Head, Biocon</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Conversion CTA -->
+<section class="relative py-24 clinical-gradient overflow-hidden">
+<div class="absolute inset-0 medical-pattern opacity-10"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
+<h2 class="font-headline text-4xl md:text-6xl text-white mb-8">Shape the Future of <span class="italic">Healthcare.</span></h2>
+<p class="text-white/80 text-xl mb-12 max-w-2xl mx-auto font-light">
+                Admissions are now open for the 2026 Academic Year. Join a community of scholars dedicated to clinical excellence and pharmaceutical innovation.
+            </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="relative bg-secondary text-white px-10 py-5 rounded-lg font-bold text-xl hover:shadow-2xl hover:shadow-secondary/50 transition-all active:scale-95 group">
+<span class="absolute inset-0 rounded-lg bg-secondary animate-ping opacity-25 group-hover:hidden"></span>
+                    Apply Now
+                </button>
+<a class="text-white/80 hover:text-white border-b border-white/30 pb-1 font-medium flex items-center gap-2 transition-all" href="#">
+                    Download Brochure <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 6: Geographic Presence -->
+<section class="h-[600px] relative w-full overflow-hidden">
+<div class="absolute inset-0 bg-[#1A237E]/20 z-10 pointer-events-none"></div>
+<div class="w-full h-full bg-primary-container flex items-center justify-center">
+<img alt="Map view" class="w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="Stylized map view of Hassan city area with medical blue tint and minimal administrative details" data-location="Hassan, Karnataka, India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0nCl3mYUu4K9uiWooZYLgLA1VFpWeJlu_hnfebJPnXEuPCfTVqSZEyPqDTEBNeMHHwDZw36lzQUpVadYir49aWi96cQlDVCWhULYSIdwAuEalvnAr9HmUTzySgmWKW4bu9RK_ghMOsFWiS2mkm7bvZZOUECKdRusDkjSPbu0ZFI0uzaZh4O5bh6f9JvEVCbJ_hH5oqqtaz5X8fXl6QDMOvFpxbF6Isse1xSg7FlnNSz2wJrIb6L07UVHoajpScKQ9JdN-fEQjbkKe"/>
+<!-- Map Overlay Card -->
+<div class="absolute z-20 left-12 top-1/2 -translate-y-1/2 bg-white p-10 rounded-xl shadow-2xl max-w-md">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-primary text-xl">Visit Campus</h4>
+<p class="text-xs text-secondary font-bold uppercase tracking-widest">Global Outreach Hub</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="home_pin">home_pin</span>
+<p class="text-outline text-sm leading-relaxed">NDRK Group of Institutions, Behind Akashwani, B.M. Road, Hassan - 573201, Karnataka, India.</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+<p class="text-outline text-sm font-semibold">+91 94481 05455 / +91 8172 233748</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+<p class="text-outline text-sm">admissions@drkcp.edu.in</p>
+</div>
+</div>
+<button class="mt-8 w-full border-2 border-primary text-primary font-bold py-3 rounded-lg hover:bg-primary hover:text-white transition-all">
+                    Get Directions
+                </button>
+</div>
+<!-- Custom Marker -->
+<div class="absolute z-20 top-1/2 right-1/4">
+<div class="relative flex items-center justify-center">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl animate-bounce">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="school">school</span>
+</div>
+<div class="absolute -bottom-2 w-4 h-4 bg-white rotate-45"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Accreditations & Affiliations -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl text-primary-container mb-4">Accreditations &amp; <span class="italic">Affiliations</span></h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Affiliation 1 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
+<div class="h-24 w-full flex items-center justify-center mb-6">
+<img alt="Government of Karnataka" class="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uhbAS0Keu6wA38FRqmtNq3oYPSMOyg-nejSuixxJPt90DD6ZZIIb1K52kuioZKdMI6tY1xioxvIGOYJC2gimuVOEfB_xPzVvkEciDXfASoUfd5Mgihh72Qk5_B_NFQUbOaQjLqsoIx82xO2eenAozviVCNVloIvThO-lHzbNmQbru-6XdqGxCNcAoq-2SFQXV4Pm0bWeLedtzzMiQ2Qf8z7wYkjzx0l6opTfGMJIicVU2ma5nb76jwu2e0_n7B6djF2GEWhHF9ZUA"/>
+</div>
+<h4 class="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Government of Karnataka</h4>
+</div>
+<!-- Affiliation 2 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
+<div class="h-24 w-full flex items-center justify-center mb-6">
+<img alt="Pharmacy Council of India" class="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uiR3DstNoqSdN3VDFh-DkkOGN1ghJyWRKo5UUXke_YlavTqvt-VXIRl-tGXzfP44zslFkRyi-a8jJbcLFA2lAXyrdLn7izPhqFzuPNQ90ccjzxVPT9P6mzgQIfaJJL_l0GzFYPvROQo0gPDa9W9Us-Tfhxamn_qtqPuIrNDQYk6-r5CbF7PYsnEfths_qECqAhlzG6nsZ41wEVLzItm_RzvPCIXcFHsPa_vLUyZctb0MI7HRqj-p-aloeZ38LNz3N1Au7rTniEDn6k"/>
+</div>
+<h4 class="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Pharmacy Council of India, New Delhi</h4>
+</div>
+<!-- Affiliation 3 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
+<div class="h-24 w-full flex items-center justify-center mb-6">
+<img alt="RGUHS" class="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ujTpQB4WwIteVS4uCnUAbTg1hJeIlh9RTRW8PkDs1mxihC1SjfkVzyVYi_ihYFeov5HyPCES3fus5YN-vE2DVeQjc_CwwoRu8eFpafKO3yUZkoWS_1apdQpOtuKQdr4LWaXEjZ_2tfpT40tXZYKP4nK-3uE3eC7wy9rgv4XfGcrOeKJgR-Cf2J8mCBsw2pguDneJnVW50E91TYBr_6uiOFG5_afudVZZNXi5zWVKvu23jy5JTUXm8jkGPMWCJaKevA1n7zaAvZL3A"/>
+</div>
+<h4 class="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Rajiv Gandhi University of Health Sciences (RGUHS)</h4>
+</div>
+<!-- Affiliation 4 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
+<div class="h-24 w-full flex items-center justify-center mb-6">
+<div class="bg-primary/5 rounded-full p-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-primary/40 group-hover:text-secondary transition-colors" data-icon="account_balance">account_balance</span>
+</div>
+</div>
+<h4 class="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Board of Examining Authority (BEAD)</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component Translation) -->
+<footer class="bg-primary text-secondary-fixed pt-24 pb-12 overflow-hidden relative">
+<div class="absolute inset-x-0 top-0 h-1 bg-secondary"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-7xl mx-auto mb-20">
+<div class="space-y-6">
+<div class="font-headline italic text-3xl text-white font-bold mb-4">DRKCP</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    A premier institution dedicated to the pharmaceutical arts and sciences, fostering a culture of rigorous inquiry and clinical mastery.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary transition-all text-white" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary transition-all text-white" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="groups">groups</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Academic Portal</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Academic Calendar</a></li>
+<li><a class="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Research Portal</a></li>
+<li><a class="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Student Login</a></li>
+<li><a class="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Career Center</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Institutional</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">About NDRK Group</a></li>
+<li><a class="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Faculty Profiles</a></li>
+<li><a class="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Alumni Network</a></li>
+<li><a class="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Accreditation</h5>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/5 p-4 rounded flex items-center justify-center">
+<span class="text-white/40 font-bold text-xs uppercase">PCI</span>
+</div>
+<div class="bg-white/5 p-4 rounded flex items-center justify-center">
+<span class="text-white/40 font-bold text-xs uppercase">AICTE</span>
+</div>
+<div class="col-span-2 bg-white/5 p-4 rounded flex items-center justify-center">
+<span class="text-white/40 font-bold text-xs uppercase">RGUHS Affiliated</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 font-label text-[10px] uppercase tracking-[0.2em]">
+                © 2024 D.R. Karigowda College of Pharmacy. Accredited by PCI &amp; AICTE.
+            </p>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-white text-[10px] uppercase tracking-widest transition-colors" href="#">Terms</a>
+<a class="text-slate-500 hover:text-white text-[10px] uppercase tracking-widest transition-colors" href="#">Accessibility</a>
+<a class="text-slate-500 hover:text-white text-[10px] uppercase tracking-widest transition-colors" href="#">Cookies</a>
+</div>
+</div>
+<!-- Floating Action Button: Back to Top -->
+<a class="fixed bottom-8 right-8 w-14 h-14 bg-secondary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40" href="#">
+<span class="material-symbols-outlined" data-icon="keyboard_double_arrow_up">keyboard_double_arrow_up</span>
+</a>
+</footer>
+</body></html>
