@@ -10,7 +10,7 @@ export default function Home() {
               alt="Laboratory focus"
               className="w-full h-full object-cover"
               data-alt="Cinematic wide shot of a modern pharmaceutical research laboratory with soft teal lighting and focused researchers in white coats"
-              src="/images/img-10.jpg"
+              src={`${import.meta.env.BASE_URL}images/img-10.jpg`}
             />
             <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px]"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-surface"></div>
@@ -51,7 +51,7 @@ export default function Home() {
               alt="Pharmacy student"
               className="relative rounded-xl shadow-2xl w-full h-[600px] object-cover"
               data-alt="Professional close-up of a pharmacy student in a white lab coat meticulously examining a microscope slide in a brightly lit technical lab"
-              src="/images/img-14.jpg"
+              src={`${import.meta.env.BASE_URL}images/img-14.jpg`}
             />
             <div className="absolute bottom-8 right-8 bg-white p-6 rounded-lg shadow-xl max-w-xs border-l-4 border-secondary">
               <p className="font-headline italic text-lg text-primary">"Education is not the learning of facts, but the training of the mind to think."</p>
@@ -182,7 +182,7 @@ export default function Home() {
                     alt="Alumni Portrait"
                     className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
                     data-alt="Professional studio headshot of a female pharmacist with a warm smile, wearing clinical attire, circular crop"
-                    src="/images/img-09.jpg"
+                    src={`${import.meta.env.BASE_URL}images/img-09.jpg`}
                   />
                   <span className="absolute bottom-0 right-0 bg-secondary text-white p-1 rounded-full text-[10px] flex items-center justify-center border-2 border-white">
                     <span className="material-symbols-outlined text-[12px]" data-icon="verified" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
@@ -213,7 +213,7 @@ export default function Home() {
                     alt="Alumni Portrait"
                     className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
                     data-alt="Candid professional portrait of a young male pharmacist in a modern pharmacy setting, smiling, circular crop"
-                    src="/images/img-21.jpg"
+                    src={`${import.meta.env.BASE_URL}images/img-21.jpg`}
                   />
                   <span className="absolute bottom-0 right-0 bg-secondary text-white p-1 rounded-full text-[10px] flex items-center justify-center border-2 border-white">
                     <span className="material-symbols-outlined text-[12px]" data-icon="verified" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
@@ -243,7 +243,7 @@ export default function Home() {
                     alt="Alumni Portrait"
                     className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
                     data-alt="Professional studio portrait of a confident female alumni pharmacist, wearing academic graduation stole, circular crop"
-                    src="/images/img-03.jpg"
+                    src={`${import.meta.env.BASE_URL}images/img-03.jpg`}
                   />
                   <span className="absolute bottom-0 right-0 bg-secondary text-white p-1 rounded-full text-[10px] flex items-center justify-center border-2 border-white">
                     <span className="material-symbols-outlined text-[12px]" data-icon="verified" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
@@ -298,7 +298,7 @@ export default function Home() {
             className="w-full h-full object-cover mix-blend-overlay opacity-30"
             data-alt="Stylized map view of Hassan city area with medical blue tint and minimal administrative details"
             data-location="Hassan, Karnataka, India"
-            src="/images/img-01.jpg"
+            src={`${import.meta.env.BASE_URL}images/img-01.jpg`}
           />
           {/* Map Overlay Card */}
           <div className="absolute z-20 left-12 top-1/2 -translate-y-1/2 bg-white p-10 rounded-xl shadow-2xl max-w-md">
@@ -355,7 +355,7 @@ export default function Home() {
                 <img
                   alt="Government of Karnataka"
                   className="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500"
-                  src="/images/img-22.jpg"
+                  src={`${import.meta.env.BASE_URL}images/img-22.jpg`}
                 />
               </div>
               <h4 className="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Government of Karnataka</h4>
@@ -366,7 +366,7 @@ export default function Home() {
                 <img
                   alt="Pharmacy Council of India"
                   className="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500"
-                  src="/images/img-23.jpg"
+                  src={`${import.meta.env.BASE_URL}images/img-23.jpg`}
                 />
               </div>
               <h4 className="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Pharmacy Council of India, New Delhi</h4>
@@ -377,7 +377,7 @@ export default function Home() {
                 <img
                   alt="RGUHS"
                   className="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500"
-                  src="/images/img-24.jpg"
+                  src={`${import.meta.env.BASE_URL}images/img-24.jpg`}
                 />
               </div>
               <h4 className="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Rajiv Gandhi University of Health Sciences (RGUHS)</h4>

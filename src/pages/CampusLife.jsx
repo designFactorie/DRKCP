@@ -7,7 +7,7 @@ export default function CampusLife() {
           <img
             className="w-full h-full object-cover"
             data-alt="modern pharmaceutical college building with sleek glass architecture and clinical blue sky background reflecting institutional heritage"
-            src="/images/img-08.jpg"
+            src={`${import.meta.env.BASE_URL}images/img-08.jpg`}
           />
           <div className="absolute inset-0 bg-primary/50 backdrop-blur-[2px]"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-surface"></div>
@@ -52,7 +52,7 @@ export default function CampusLife() {
               <img
                 className="w-full h-full object-cover"
                 data-alt="organized university library with wooden shelves filled with medical journals and modern private reading carrels in soft natural light"
-                src="/images/img-18.jpg"
+                src={`${import.meta.env.BASE_URL}images/img-18.jpg`}
               />
             </div>
             <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
@@ -96,7 +96,7 @@ export default function CampusLife() {
               <img
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 data-alt="professional laboratory technician using high-end spectrophotometer in a clean clinical environment with blue lighting"
-                src="/images/img-16.jpg"
+                src={`${import.meta.env.BASE_URL}images/img-16.jpg`}
               />
               <div className="absolute inset-0 bg-primary/40 flex items-end p-6">
                 <span className="text-white font-bold text-lg">Industry-Standard Gear</span>
@@ -154,7 +154,7 @@ export default function CampusLife() {
             <img
               className="w-full h-full object-cover"
               data-alt="lush botanical garden with diverse medicinal plants like cinnamon and clove, labeled with botanical tags in a serene campus setting"
-              src="/images/img-20.jpg"
+              src={`${import.meta.env.BASE_URL}images/img-20.jpg`}
             />
           </div>
           <div className="lg:w-1/2 bg-secondary text-on-secondary p-12 md:p-24 flex flex-col justify-center">
@@ -187,7 +187,7 @@ export default function CampusLife() {
               <img
                 className="w-full h-full object-cover"
                 data-alt="clean and bright student hostel room with two comfortable beds, study desks, and large windows looking onto green college grounds"
-                src="/images/img-15.jpg"
+                src={`${import.meta.env.BASE_URL}images/img-15.jpg`}
               />
             </div>
             <div className="bg-white p-10 shadow-sm border-l-8 border-primary rounded-r-xl">
@@ -212,7 +212,7 @@ export default function CampusLife() {
               <img
                 className="w-full h-full object-cover"
                 data-alt="spacious and clean institutional dining hall with neat seating arrangements and a bright atmosphere for student meals"
-                src="/images/img-13.jpg"
+                src={`${import.meta.env.BASE_URL}images/img-13.jpg`}
               />
             </div>
           </div>

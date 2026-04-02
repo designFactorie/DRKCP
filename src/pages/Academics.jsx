@@ -8,7 +8,7 @@ export default function Academics() {
             alt=""
             className="w-full h-full object-cover"
             data-alt="Wide angle view of a prestigious pharmacy college building with modern architectural glass facade and manicured clinical gardens under bright sunlight"
-            src="/images/img-04.jpg"
+            src={`${import.meta.env.BASE_URL}images/img-04.jpg`}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-container to-transparent"></div>
         </div>
@@ -201,7 +201,7 @@ export default function Academics() {
                   alt=""
                   className="rounded-xl shadow-lg w-full aspect-video object-cover"
                   data-alt="Pharmacy students in professional white lab coats performing titration and chemical analysis in a clean modern laboratory setting"
-                  src="/images/img-07.jpg"
+                  src={`${import.meta.env.BASE_URL}images/img-07.jpg`}
                 />
               </div>
               <div className="order-1 lg:order-2">
@@ -266,7 +266,7 @@ export default function Academics() {
                   alt=""
                   className="rounded-xl shadow-lg w-full aspect-video object-cover"
                   data-alt="Spacious modern academic lecture hall with tiered seating and professional audiovisual equipment for pharmaceutical education"
-                  src="/images/img-06.jpg"
+                  src={`${import.meta.env.BASE_URL}images/img-06.jpg`}
                 />
               </div>
             </div>
@@ -278,7 +278,7 @@ export default function Academics() {
                   alt=""
                   className="rounded-xl shadow-lg w-full aspect-video object-cover"
                   data-alt="High-tech pharmaceutical research unit with advanced chromatography equipment and a researcher in sterile environment"
-                  src="/images/img-12.jpg"
+                  src={`${import.meta.env.BASE_URL}images/img-12.jpg`}
                 />
               </div>
               <div className="order-1 lg:order-2">
