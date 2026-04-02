@@ -10,10 +10,10 @@ export default function CampusLife() {
             src={`${import.meta.env.BASE_URL}images/img-08.jpg`}
           />
           <div className="absolute inset-0 bg-primary/50 backdrop-blur-[2px]"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-surface"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-4xl text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight font-headline">Institutional Infrastructure</h1>
+          <h1 className="text-5xl md:text-7xl text-white mb-4 leading-tight font-headline">Institutional Infrastructure</h1>
           <p className="text-secondary-fixed font-medium tracking-widest uppercase text-sm mb-8">World-Class Facilities for Clinical Excellence</p>
           <div className="w-24 h-1 bg-secondary mx-auto"></div>
         </div>

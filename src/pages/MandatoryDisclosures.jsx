@@ -11,7 +11,7 @@ export default function MandatoryDisclosures() {
               Transparency {"&"} Compliance
             </span>
             <h1 className="text-5xl md:text-7xl font-headline text-white leading-tight mb-6">
-              Mandatory Disclosures
+              Important Links
             </h1>
             <p className="text-white/80 text-lg md:text-xl max-w-xl leading-relaxed">
               Access regulatory portals, university services, scholarship resources, and official disclosures as required by regulatory authorities.

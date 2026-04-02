@@ -1,4 +1,8 @@
+import { useState } from 'react'
+
 export default function Faculty() {
+  const [activePhilosophy, setActivePhilosophy] = useState('vision')
+
   return (
     <>
       {/* Hero Section: Institutional History */}
@@ -7,7 +11,7 @@ export default function Faculty() {
           <div className="lg:col-span-7">
             <span className="text-secondary font-semibold tracking-widest uppercase text-sm mb-4 block">Institutional Heritage</span>
             <h1 className="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8">
-              The Legacy of <span className="italic">Boovanahally Channakeshava Swamy</span> Vidya Samsthe
+              The Legacy of <span className="italic">Boovanahally Channakeshava Swamy Vidya Samsthe</span>
             </h1>
             <div className="space-y-6 text-on-surface-variant text-lg leading-relaxed max-w-2xl">
               <p>
@@ -24,13 +28,51 @@ export default function Faculty() {
           </div>
           <div className="lg:col-span-5 relative">
             <div className="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative z-10">
-              <img alt="Stately institutional architecture with white columns and manicured lawns under a clear blue sky, professional and prestigious academic setting" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/img-19.jpg`} />
+              <img alt="Stately institutional architecture with white columns and manicured lawns under a clear blue sky, professional and prestigious academic setting" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/drkcp-building.png`} />
             </div>
             {/* Asymmetric Decorative Element */}
             <div className="absolute -bottom-6 -left-6 w-full h-full bg-secondary-container -z-10 rounded-xl translate-x-12 translate-y-12 opacity-30"></div>
           </div>
         </div>
       </header>
+
+      {/* Core Philosophy: Mission, Vision & Values */}
+      <section className="py-24 bg-surface-container-low">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="max-w-xl">
+              <h2 className="font-headline text-4xl text-primary mb-4">Core Philosophy</h2>
+              <p className="text-on-surface-variant">The Clinical Curator approach: blending traditional pharmacy ethics with contemporary medical precision.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" onMouseLeave={() => setActivePhilosophy('vision')}>
+            <PhilosophyTile
+              id="mission"
+              active={activePhilosophy === 'mission'}
+              onHover={() => setActivePhilosophy('mission')}
+              icon="clinical_notes"
+              title="Mission"
+              description="Empowering a child-centric environment to develop socially responsible, independent, knowledgeable, lifelong learners and leaders."
+            />
+            <PhilosophyTile
+              id="vision"
+              active={activePhilosophy === 'vision'}
+              onHover={() => setActivePhilosophy('vision')}
+              icon="visibility"
+              title="Vision"
+              description="To mold our students to be compassionate, progressive, intellectual, and successful human beings prepared for the evolving medical landscape."
+            />
+            <PhilosophyTile
+              id="values"
+              active={activePhilosophy === 'values'}
+              onHover={() => setActivePhilosophy('values')}
+              icon="vitals"
+              title="Values"
+              description="To ensure the all-round development of every student in his/her own way. To nurture the right human values based on integration and social harmony."
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Section 1.5: Our Leadership */}
       <section className="py-24 bg-surface">
@@ -52,7 +94,7 @@ export default function Faculty() {
           {/* Managing Director */}
           <div className="group">
             <div className="relative aspect-square overflow-hidden rounded-xl mb-6 shadow-lg border-b-4 border-secondary transition-all group-hover:shadow-xl group-hover:-translate-y-1">
-              <img alt="Mr. Suhas Prasad, Managing Director" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src={`${import.meta.env.BASE_URL}images/img-02.jpg`} />
+              <img alt="Mr. Suhas Prasad, Managing Director" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src={`${import.meta.env.BASE_URL}images/suhas-prasad.png`} />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <h3 className="font-headline text-2xl text-primary mb-1">Mr. Suhas Prasad</h3>
@@ -61,7 +103,7 @@ export default function Faculty() {
           {/* Principal */}
           <div className="group">
             <div className="relative aspect-square overflow-hidden rounded-xl mb-6 shadow-lg border-b-4 border-secondary transition-all group-hover:shadow-xl group-hover:-translate-y-1">
-              <img alt="Dr. Meena Purohit, Principal" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src={`${import.meta.env.BASE_URL}images/img-05.jpg`} />
+              <img alt="Dr. Meena Purohit, Principal" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src={`${import.meta.env.BASE_URL}images/meena-purohit.png`} />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <h3 className="font-headline text-2xl text-primary mb-1">Dr. Meena Purohit</h3>
@@ -114,82 +156,52 @@ export default function Faculty() {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-primary text-white">
-                  <th className="py-5 px-8 font-headline text-lg font-bold border-r border-white/10">Name</th>
-                  <th className="py-5 px-8 font-headline text-lg font-bold">Designation</th>
+                  <th className="py-5 px-4 md:px-6 font-headline text-sm md:text-lg font-bold border-r border-white/10 w-12 text-center">Sl No</th>
+                  <th className="py-5 px-4 md:px-6 font-headline text-sm md:text-lg font-bold border-r border-white/10">Name</th>
+                  <th className="py-5 px-4 md:px-6 font-headline text-sm md:text-lg font-bold border-r border-white/10 hidden md:table-cell">Department</th>
+                  <th className="py-5 px-4 md:px-6 font-headline text-sm md:text-lg font-bold">Designation</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-outline-variant/20 bg-white">
-                <tr className="hover:bg-surface-container-low transition-colors duration-200">
-                  <td className="py-5 px-8 font-medium text-primary border-r border-outline-variant/10">Dr. Meena Purohit</td>
-                  <td className="py-5 px-8 text-on-surface-variant">Principal and HOD of Pharmaceutical Chemistry Department</td>
-                </tr>
-                <tr className="hover:bg-surface-container-low transition-colors duration-200">
-                  <td className="py-5 px-8 font-medium text-primary border-r border-outline-variant/10">Mr. Kerryn D'Silva</td>
-                  <td className="py-5 px-8 text-on-surface-variant">Vice-Principal</td>
-                </tr>
-                <tr className="hover:bg-surface-container-low transition-colors duration-200">
-                  <td className="py-5 px-8 font-medium text-primary border-r border-outline-variant/10">Mrs Bhagya</td>
-                  <td className="py-5 px-8 text-on-surface-variant">Associate Professor &amp; D.Pharm In-Charge</td>
-                </tr>
-                <tr className="hover:bg-surface-container-low transition-colors duration-200">
-                  <td className="py-5 px-8 font-medium text-primary border-r border-outline-variant/10">Dr. Sanjana S</td>
-                  <td className="py-5 px-8 text-on-surface-variant">Associate Professor and HOD of Pharmaceutics Department</td>
-                </tr>
-                <tr className="hover:bg-surface-container-low transition-colors duration-200">
-                  <td className="py-5 px-8 font-medium text-primary border-r border-outline-variant/10">Mr. Suresh</td>
-                  <td className="py-5 px-8 text-on-surface-variant">Associate Professor</td>
-                </tr>
-                <tr className="hover:bg-surface-container-low transition-colors duration-200">
-                  <td className="py-5 px-8 font-medium text-primary border-r border-outline-variant/10">Mr. Mahaveer Singh</td>
-                  <td className="py-5 px-8 text-on-surface-variant">Associate Professor</td>
-                </tr>
-                <tr className="hover:bg-surface-container-low transition-colors duration-200">
-                  <td className="py-5 px-8 font-medium text-primary border-r border-outline-variant/10">Mrs. Preethi Fernandez</td>
-                  <td className="py-5 px-8 text-on-surface-variant">Associate Professor and HOD of Pharmacy Practice</td>
-                </tr>
+                {/* Pharmaceutical Chemistry */}
+                <FacultyRow n={1} name="Dr. Meena Purohit" dept="Pharmaceutical Chemistry" title="Professor & HOD" />
+                <FacultyRow n={2} name="Bhagya T S" dept="Pharmaceutical Chemistry" title="Associate Professor" />
+                <FacultyRow n={3} name="Kerryn Joseph A Dsilva" dept="Pharmaceutical Chemistry" title="Associate Professor" />
+                <FacultyRow n={4} name="Dushyanth Raj M M" dept="Pharmaceutical Chemistry" title="Assistant Professor" />
+                <FacultyRow n={5} name="Jeevitha L" dept="Pharmaceutical Chemistry" title="Assistant Professor" />
+                <FacultyRow n={6} name="Tanaji" dept="Pharmaceutical Chemistry" title="Assistant Professor" />
+                <FacultyRow n={7} name="Sankar Nagappa" dept="Pharmaceutical Chemistry" title="Assistant Professor" />
+                <FacultyRow n={8} name="Nandini H G M" dept="Pharmaceutical Chemistry" title="Assistant Professor" />
+                <FacultyRow n={9} name="Amithkumar B S" dept="Pharmaceutical Chemistry" title="Assistant Professor" />
+                <FacultyRow n={10} name="Devarakonda Subramanyam" dept="Pharmaceutical Chemistry" title="Assistant Professor" />
+                {/* Pharmaceutics */}
+                <FacultyRow n={11} name="Anil Kumar A P" dept="Pharmaceutics" title="Associate Professor" />
+                <FacultyRow n={12} name="Mahaveer Singh" dept="Pharmaceutics" title="Associate Professor" />
+                <FacultyRow n={13} name="Suresh N (PhD)" dept="Pharmaceutics" title="Associate Professor & HOD" />
+                <FacultyRow n={14} name="Abilasha T P" dept="Pharmaceutics" title="Associate Professor" />
+                <FacultyRow n={15} name="Anusha B H" dept="Pharmaceutics" title="Assistant Professor" />
+                <FacultyRow n={16} name="Kavya J P" dept="Pharmaceutics" title="Assistant Professor" />
+                <FacultyRow n={17} name="Rakesh B E" dept="Pharmaceutics" title="Assistant Professor" />
+                <FacultyRow n={18} name="Naveen Kumar N J" dept="Pharmaceutics" title="Assistant Professor" />
+                <FacultyRow n={19} name="Sinchana H J" dept="Pharmaceutics" title="Assistant Professor" />
+                <FacultyRow n={20} name="Aishwarya Kini M" dept="Pharmaceutics" title="Assistant Professor" />
+                <FacultyRow n={21} name="Priyanka K M (PhD)" dept="Pharmaceutics" title="Assistant Professor" />
+                <FacultyRow n={22} name="Shiva Chavhan H R" dept="Pharmaceutics" title="Assistant Professor" />
+                {/* Pharmacology */}
+                <FacultyRow n={23} name="Preethi Fernandiz" dept="Pharmacology" title="Associate Professor & HOD" />
+                <FacultyRow n={24} name="Sharadhi M" dept="Pharmacology" title="Assistant Professor" />
+                <FacultyRow n={25} name="Praveen Kumar C Sajjan" dept="Pharmacology" title="Assistant Professor" />
+                <FacultyRow n={26} name="Chandini B C" dept="Pharmacology" title="Assistant Professor" />
+                <FacultyRow n={27} name="Sumanth N R" dept="Pharmacology" title="Assistant Professor" />
+                <FacultyRow n={28} name="Vidya Banakar" dept="Pharmacology" title="Assistant Professor" />
+                <FacultyRow n={29} name="Dr. Shruty Bipin" dept="Pharmacology" title="Assistant Professor" />
+                {/* Pharmacognosy */}
+                <FacultyRow n={30} name="Hemalatha H T (PhD)" dept="Pharmacognosy" title="Associate Professor & HOD" />
+                <FacultyRow n={31} name="Rekha M" dept="Pharmacognosy" title="Assistant Professor" />
+                <FacultyRow n={32} name="Dr. Najeed S M" dept="Pharmacognosy" title="Assistant Professor" />
+                <FacultyRow n={33} name="Ankush D N" dept="Pharmacognosy" title="Assistant Professor" />
               </tbody>
             </table>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 2: Mission, Vision & Values (Bento-style Glassmorphism) */}
-      <section className="py-24 bg-surface-container-low">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div className="max-w-xl">
-              <h2 className="font-headline text-4xl text-primary mb-4">Core Philosophy</h2>
-              <p className="text-on-surface-variant">The Clinical Curator approach: blending traditional pharmacy ethics with contemporary medical precision.</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Mission */}
-            <div className="bg-surface-container-lowest p-10 rounded-xl shadow-sm border-l-4 border-secondary flex flex-col gap-6">
-              <span className="material-symbols-outlined text-secondary text-4xl" data-icon="clinical_notes">clinical_notes</span>
-              <h3 className="font-headline text-2xl text-primary">Mission</h3>
-              <p className="text-on-surface-variant leading-relaxed">
-                Empowering a child-centric environment to develop socially responsible, independent, knowledgeable, lifelong learners and leaders.
-              </p>
-            </div>
-            {/* Vision */}
-            <div className="bg-primary-container p-10 rounded-xl shadow-xl flex flex-col gap-6 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-4 opacity-10">
-                <span className="material-symbols-outlined text-8xl" data-icon="visibility">visibility</span>
-              </div>
-              <span className="material-symbols-outlined text-secondary-fixed text-4xl" data-icon="visibility">visibility</span>
-              <h3 className="font-headline text-2xl">Vision</h3>
-              <p className="text-primary-fixed-dim leading-relaxed">
-                To mold our students to be compassionate, progressive, intellectual, and successful human beings prepared for the evolving medical landscape.
-              </p>
-            </div>
-            {/* Values */}
-            <div className="bg-surface-container-lowest p-10 rounded-xl shadow-sm border-l-4 border-secondary flex flex-col gap-6">
-              <span className="material-symbols-outlined text-secondary text-4xl" data-icon="vitals">vitals</span>
-              <h3 className="font-headline text-2xl text-primary">Values</h3>
-              <p className="text-on-surface-variant leading-relaxed">
-                To ensure the all-round development of every student in his/her own way. To nurture the right human values based on integration and social harmony.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -273,4 +285,39 @@ export default function Faculty() {
       </section>
     </>
   );
+}
+
+function FacultyRow({ n, name, dept, title }) {
+  return (
+    <tr className="hover:bg-surface-container-low transition-colors duration-200">
+      <td className="py-4 px-4 md:px-6 text-outline text-center border-r border-outline-variant/10 text-sm">{n}</td>
+      <td className="py-4 px-4 md:px-6 font-medium text-primary border-r border-outline-variant/10">{name}</td>
+      <td className="py-4 px-4 md:px-6 text-on-surface-variant border-r border-outline-variant/10 hidden md:table-cell">{dept}</td>
+      <td className="py-4 px-4 md:px-6 text-on-surface-variant">{title}</td>
+    </tr>
+  )
+}
+
+function PhilosophyTile({ active, onHover, icon, title, description }) {
+  return (
+    <div
+      onMouseEnter={onHover}
+      className={`p-10 rounded-xl flex flex-col gap-6 relative overflow-hidden transition-all duration-500 cursor-pointer ${
+        active
+          ? 'bg-primary-container shadow-xl text-white'
+          : 'bg-surface-container-lowest shadow-sm border-l-4 border-secondary'
+      }`}
+    >
+      {active && (
+        <div className="absolute top-0 right-0 p-4 opacity-10">
+          <span className="material-symbols-outlined text-8xl">{icon}</span>
+        </div>
+      )}
+      <span className={`material-symbols-outlined text-4xl transition-colors duration-500 ${active ? 'text-secondary-fixed' : 'text-secondary'}`}>{icon}</span>
+      <h3 className={`font-headline text-2xl transition-colors duration-500 ${active ? 'text-white' : 'text-primary'}`}>{title}</h3>
+      <p className={`leading-relaxed transition-colors duration-500 ${active ? 'text-primary-fixed-dim' : 'text-on-surface-variant'}`}>
+        {description}
+      </p>
+    </div>
+  )
 }

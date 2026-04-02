@@ -6,7 +6,8 @@ import Home from './pages/Home'
 import Faculty from './pages/Faculty'
 import Academics from './pages/Academics'
 import CampusLife from './pages/CampusLife'
-import MandatoryDisclosures from './pages/MandatoryDisclosures'
+import ImportantLinks from './pages/MandatoryDisclosures'
+import MandatoryDisclosuresPage from './pages/MandatoryDisclosuresPage'
 
 export default function App() {
   return (
@@ -19,7 +20,8 @@ export default function App() {
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/campus-life" element={<CampusLife />} />
-          <Route path="/disclosures" element={<MandatoryDisclosures />} />
+          <Route path="/important-links" element={<ImportantLinks />} />
+          <Route path="/disclosures" element={<MandatoryDisclosuresPage />} />
         </Routes>
         <Footer />
       </div>

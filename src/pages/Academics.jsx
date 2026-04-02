@@ -1,4 +1,9 @@
+import { useState } from 'react'
+
 export default function Academics() {
+  const [activePathway, setActivePathway] = useState('bpharm')
+  const [activeAdmission, setActiveAdmission] = useState('bpharm')
+
   return (
     <>
       {/* Hero Section */}
@@ -78,36 +83,43 @@ export default function Academics() {
             <h2 className="text-4xl font-headline text-primary mb-4">Admissions Hub</h2>
             <p className="text-on-surface-variant">Detailed criteria and documentation for prospective scholars.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" onMouseLeave={() => setActiveAdmission('bpharm')}>
             {/* D.Pharm Card */}
-            <div className="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:shadow-xl transition-all duration-300">
+            <div
+              onMouseEnter={() => setActiveAdmission('dpharm')}
+              className={`p-8 rounded-xl transition-all duration-500 cursor-pointer ${
+                activeAdmission === 'dpharm'
+                  ? 'bg-primary-container text-white shadow-xl transform md:-translate-y-4'
+                  : 'bg-surface-container-lowest border border-outline-variant/10 shadow-sm'
+              }`}
+            >
               <div className="flex justify-between items-start mb-8">
-                <h3 className="text-2xl font-headline text-primary font-bold">D.Pharm</h3>
-                <span className="material-symbols-outlined text-secondary text-3xl">medical_services</span>
+                <h3 className={`text-2xl font-headline font-bold transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-secondary-fixed' : 'text-primary'}`}>D.Pharm</h3>
+                <span className={`material-symbols-outlined text-3xl transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>medical_services</span>
               </div>
               <div className="space-y-6">
                 <div>
-                  <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Duration</p>
-                  <p className="text-on-surface">2 Years Full-Time</p>
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-2 transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-on-primary-container' : 'text-secondary'}`}>Duration</p>
+                  <p className={`transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-white' : 'text-on-surface'}`}>2 Years Full-Time</p>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Eligibility</p>
-                  <p className="text-on-surface text-sm leading-relaxed">Pass in 10+2 / PUC with PCM or PCB from a recognized board.</p>
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-2 transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-on-primary-container' : 'text-secondary'}`}>Eligibility</p>
+                  <p className={`text-sm leading-relaxed transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-primary-fixed' : 'text-on-surface'}`}>Pass in 10+2 / PUC with PCM or PCB from a recognized board.</p>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Documents Required</p>
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-2 transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-on-primary-container' : 'text-secondary'}`}>Documents Required</p>
                   <ul className="mt-3 space-y-2">
-                    <li className="flex items-center gap-2 text-sm text-on-surface-variant">
-                      <span className="material-symbols-outlined text-sm text-secondary">check_circle</span> SSLC/10th Marks Card
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'dpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'dpharm' ? 'description' : 'check_circle'}</span> SSLC/10th Marks Card
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-on-surface-variant">
-                      <span className="material-symbols-outlined text-sm text-secondary">check_circle</span> PUC/10+2 Marks Card
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'dpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'dpharm' ? 'description' : 'check_circle'}</span> PUC/10+2 Marks Card
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-on-surface-variant">
-                      <span className="material-symbols-outlined text-sm text-secondary">check_circle</span> Transfer Certificate
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'dpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'dpharm' ? 'description' : 'check_circle'}</span> Transfer Certificate
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-on-surface-variant">
-                      <span className="material-symbols-outlined text-sm text-secondary">check_circle</span> Migration Certificate
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'dpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'dpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'dpharm' ? 'description' : 'check_circle'}</span> Migration Certificate
                     </li>
                   </ul>
                 </div>
@@ -115,34 +127,41 @@ export default function Academics() {
             </div>
 
             {/* B.Pharm Card */}
-            <div className="bg-primary-container p-8 rounded-xl text-white shadow-xl transform md:-translate-y-4">
+            <div
+              onMouseEnter={() => setActiveAdmission('bpharm')}
+              className={`p-8 rounded-xl transition-all duration-500 cursor-pointer ${
+                activeAdmission === 'bpharm'
+                  ? 'bg-primary-container text-white shadow-xl transform md:-translate-y-4'
+                  : 'bg-surface-container-lowest border border-outline-variant/10 shadow-sm'
+              }`}
+            >
               <div className="flex justify-between items-start mb-8">
-                <h3 className="text-2xl font-headline font-bold text-secondary-fixed">B.Pharm</h3>
-                <span className="material-symbols-outlined text-secondary-fixed text-3xl">science</span>
+                <h3 className={`text-2xl font-headline font-bold transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-secondary-fixed' : 'text-primary'}`}>B.Pharm</h3>
+                <span className={`material-symbols-outlined text-3xl transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>science</span>
               </div>
               <div className="space-y-6">
                 <div>
-                  <p className="text-xs font-bold text-on-primary-container uppercase tracking-widest mb-2">Duration</p>
-                  <p className="text-white">4 Years (8 Semesters)</p>
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-2 transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-on-primary-container' : 'text-secondary'}`}>Duration</p>
+                  <p className={`transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-white' : 'text-on-surface'}`}>4 Years (8 Semesters)</p>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-on-primary-container uppercase tracking-widest mb-2">Eligibility</p>
-                  <p className="text-primary-fixed text-sm leading-relaxed">PUC with 45% (40% for SC/ST) in PCM/PCB or D.Pharm for Lateral Entry.</p>
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-2 transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-on-primary-container' : 'text-secondary'}`}>Eligibility</p>
+                  <p className={`text-sm leading-relaxed transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-primary-fixed' : 'text-on-surface'}`}>PUC with 45% (40% for SC/ST) in PCM/PCB or D.Pharm for Lateral Entry.</p>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-on-primary-container uppercase tracking-widest mb-2">Documents Required</p>
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-2 transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-on-primary-container' : 'text-secondary'}`}>Documents Required</p>
                   <ul className="mt-3 space-y-2">
-                    <li className="flex items-center gap-2 text-sm text-primary-fixed">
-                      <span className="material-symbols-outlined text-sm">description</span> All Semesters Marks Cards
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'bpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'bpharm' ? 'description' : 'check_circle'}</span> All Semesters Marks Cards
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-primary-fixed">
-                      <span className="material-symbols-outlined text-sm">description</span> Caste {"&"} Income Certificate
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'bpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'bpharm' ? 'description' : 'check_circle'}</span> Caste {"&"} Income Certificate
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-primary-fixed">
-                      <span className="material-symbols-outlined text-sm">description</span> 6 Passport size photos
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'bpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'bpharm' ? 'description' : 'check_circle'}</span> 6 Passport size photos
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-primary-fixed">
-                      <span className="material-symbols-outlined text-sm">description</span> Eligibility Certificate (Non-Karnataka)
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'bpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'bpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'bpharm' ? 'description' : 'check_circle'}</span> Eligibility Certificate (Non-Karnataka)
                     </li>
                   </ul>
                 </div>
@@ -150,34 +169,41 @@ export default function Academics() {
             </div>
 
             {/* M.Pharm Card */}
-            <div className="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 hover:shadow-xl transition-all duration-300">
+            <div
+              onMouseEnter={() => setActiveAdmission('mpharm')}
+              className={`p-8 rounded-xl transition-all duration-500 cursor-pointer ${
+                activeAdmission === 'mpharm'
+                  ? 'bg-primary-container text-white shadow-xl transform md:-translate-y-4'
+                  : 'bg-surface-container-lowest border border-outline-variant/10 shadow-sm'
+              }`}
+            >
               <div className="flex justify-between items-start mb-8">
-                <h3 className="text-2xl font-headline text-primary font-bold">M.Pharm</h3>
-                <span className="material-symbols-outlined text-secondary text-3xl">biotech</span>
+                <h3 className={`text-2xl font-headline font-bold transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-secondary-fixed' : 'text-primary'}`}>M.Pharm</h3>
+                <span className={`material-symbols-outlined text-3xl transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>biotech</span>
               </div>
               <div className="space-y-6">
                 <div>
-                  <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Duration</p>
-                  <p className="text-on-surface">2 Years (4 Semesters)</p>
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-2 transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-on-primary-container' : 'text-secondary'}`}>Duration</p>
+                  <p className={`transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-white' : 'text-on-surface'}`}>2 Years (4 Semesters)</p>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Eligibility</p>
-                  <p className="text-on-surface text-sm leading-relaxed">B.Pharm degree with minimum 55% aggregate marks (50% for SC/ST).</p>
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-2 transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-on-primary-container' : 'text-secondary'}`}>Eligibility</p>
+                  <p className={`text-sm leading-relaxed transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-primary-fixed' : 'text-on-surface'}`}>B.Pharm degree with minimum 55% aggregate marks (50% for SC/ST).</p>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Documents Required</p>
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-2 transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-on-primary-container' : 'text-secondary'}`}>Documents Required</p>
                   <ul className="mt-3 space-y-2">
-                    <li className="flex items-center gap-2 text-sm text-on-surface-variant">
-                      <span className="material-symbols-outlined text-sm text-secondary">check_circle</span> B.Pharm Convocation Cert.
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'mpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'mpharm' ? 'description' : 'check_circle'}</span> B.Pharm Convocation Cert.
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-on-surface-variant">
-                      <span className="material-symbols-outlined text-sm text-secondary">check_circle</span> GPAT/PGCET Score Card
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'mpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'mpharm' ? 'description' : 'check_circle'}</span> GPAT/PGCET Score Card
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-on-surface-variant">
-                      <span className="material-symbols-outlined text-sm text-secondary">check_circle</span> Professional Registration
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'mpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'mpharm' ? 'description' : 'check_circle'}</span> Professional Registration
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-on-surface-variant">
-                      <span className="material-symbols-outlined text-sm text-secondary">check_circle</span> Physical Fitness Certificate
+                    <li className={`flex items-center gap-2 text-sm transition-colors duration-500 ${activeAdmission === 'mpharm' ? 'text-primary-fixed' : 'text-on-surface-variant'}`}>
+                      <span className={`material-symbols-outlined text-sm transition-colors duration-500 ${activeAdmission === 'mpharm' ? '' : 'text-secondary'}`}>{activeAdmission === 'mpharm' ? 'description' : 'check_circle'}</span> Physical Fitness Certificate
                     </li>
                   </ul>
                 </div>
@@ -207,7 +233,7 @@ export default function Academics() {
               <div className="order-1 lg:order-2">
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-6xl font-bold text-secondary/10 font-headline">01</span>
-                  <h3 className="text-3xl font-bold font-headline text-primary">Diploma in Pharmacy (ER-2020)</h3>
+                  <h3 className="text-3xl font-bold font-headline text-primary">Diploma in Pharmacy — D.Pharm</h3>
                 </div>
                 <div className="space-y-6 inter text-on-surface-variant">
                   <p>The D.Pharm curriculum is structured to provide a solid foundation in pharmaceutical sciences. It involves a rigorous 2-year academic program followed by an essential internship.</p>
@@ -238,7 +264,7 @@ export default function Academics() {
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-6xl font-bold text-secondary/10 font-headline">02</span>
-                  <h3 className="text-3xl font-bold font-headline text-primary">Bachelor of Pharmacy (CBCS)</h3>
+                  <h3 className="text-3xl font-bold font-headline text-primary">Bachelor of Pharmacy — B.Pharm</h3>
                 </div>
                 <div className="space-y-6 inter text-on-surface-variant">
                   <p>Based on the PCI Choice Based Credit System (CBCS). This provides flexibility and professional depth across 8 semesters of intensive study.</p>
@@ -284,7 +310,7 @@ export default function Academics() {
               <div className="order-1 lg:order-2">
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-6xl font-bold text-secondary/10 font-headline">03</span>
-                  <h3 className="text-3xl font-bold font-headline text-primary">Master of Pharmacy (MPR)</h3>
+                  <h3 className="text-3xl font-bold font-headline text-primary">Master of Pharmacy — M.Pharm</h3>
                 </div>
                 <div className="space-y-6 inter text-on-surface-variant">
                   <p>The Master's program focuses on specialization and research. Students engage in advanced theoretical coursework and original dissertation work.</p>
@@ -321,72 +347,90 @@ export default function Academics() {
               Empowering our graduates to navigate diverse and rewarding landscapes in the global pharmaceutical ecosystem.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10" onMouseLeave={() => setActivePathway('bpharm')}>
             {/* D.Pharm Pathways */}
-            <div className="flex flex-col bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/20">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-secondary/10 text-secondary rounded-xl mb-6">
+            <div
+              onMouseEnter={() => setActivePathway('dpharm')}
+              className={`flex flex-col p-8 rounded-2xl transition-all duration-500 cursor-pointer ${
+                activePathway === 'dpharm'
+                  ? 'bg-primary text-white shadow-xl transform lg:-translate-y-6'
+                  : 'bg-white shadow-sm border border-outline-variant/20'
+              }`}
+            >
+              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 transition-colors duration-500 ${
+                activePathway === 'dpharm' ? 'bg-white/10 text-white' : 'bg-secondary/10 text-secondary'
+              }`}>
                 <span className="material-symbols-outlined text-3xl">school</span>
               </div>
-              <h3 className="text-2xl font-headline text-primary mb-6">D.Pharm Pathways</h3>
-              <div className="space-y-8 flex-grow inter">
+              <h3 className={`text-2xl font-headline mb-6 transition-colors duration-500 ${activePathway === 'dpharm' ? 'text-white' : 'text-primary'}`}>D.Pharm Pathways</h3>
+              <div className="space-y-8 flex-grow">
                 <div>
-                  <h4 className="text-sm font-bold text-secondary uppercase tracking-widest mb-3">Higher Studies</h4>
-                  <p className="text-on-surface-variant">Pursue Bachelor of Pharmacy (B.Pharm) through lateral entry programs.</p>
+                  <h4 className={`text-sm font-bold uppercase tracking-widest mb-3 transition-colors duration-500 ${activePathway === 'dpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>Higher Studies</h4>
+                  <p className={`transition-colors duration-500 ${activePathway === 'dpharm' ? 'text-on-primary-container text-sm' : 'text-on-surface-variant'}`}>Pursue Bachelor of Pharmacy (B.Pharm) through lateral entry programs.</p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-secondary uppercase tracking-widest mb-3">Professional Practice</h4>
-                  <p className="text-on-surface-variant leading-relaxed text-sm">
+                  <h4 className={`text-sm font-bold uppercase tracking-widest mb-3 transition-colors duration-500 ${activePathway === 'dpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>Professional Practice</h4>
+                  <p className={`leading-relaxed text-sm transition-colors duration-500 ${activePathway === 'dpharm' ? 'text-on-primary-container' : 'text-on-surface-variant'}`}>
                     Diploma holders may start practicing as pharmacists in India at chemist shops, private clinics, drug stores, and retail chains. Responsibilities include reading prescriptions, checking drug interactions, advising patients, and inventory management.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-secondary uppercase tracking-widest mb-3">Entrepreneurship</h4>
-                  <p className="text-on-surface-variant">Beyond employment, diploma holders are qualified to open and operate their own retail chemist shops.</p>
+                  <h4 className={`text-sm font-bold uppercase tracking-widest mb-3 transition-colors duration-500 ${activePathway === 'dpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>Entrepreneurship</h4>
+                  <p className={`transition-colors duration-500 ${activePathway === 'dpharm' ? 'text-on-primary-container text-sm' : 'text-on-surface-variant'}`}>Beyond employment, diploma holders are qualified to open and operate their own retail chemist shops.</p>
                 </div>
               </div>
             </div>
 
             {/* B.Pharm Pathways */}
-            <div className="flex flex-col bg-primary text-white p-8 rounded-2xl shadow-xl transform lg:-translate-y-6">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-white/10 text-white rounded-xl mb-6">
+            <div
+              onMouseEnter={() => setActivePathway('bpharm')}
+              className={`flex flex-col p-8 rounded-2xl transition-all duration-500 cursor-pointer ${
+                activePathway === 'bpharm'
+                  ? 'bg-primary text-white shadow-xl transform lg:-translate-y-6'
+                  : 'bg-white shadow-sm border border-outline-variant/20'
+              }`}
+            >
+              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 transition-colors duration-500 ${
+                activePathway === 'bpharm' ? 'bg-white/10 text-white' : 'bg-secondary/10 text-secondary'
+              }`}>
                 <span className="material-symbols-outlined text-3xl">work_history</span>
               </div>
-              <h3 className="text-2xl font-headline text-white mb-6">B.Pharm Pathways</h3>
-              <div className="space-y-8 flex-grow inter">
+              <h3 className={`text-2xl font-headline mb-6 transition-colors duration-500 ${activePathway === 'bpharm' ? 'text-white' : 'text-primary'}`}>B.Pharm Pathways</h3>
+              <div className="space-y-8 flex-grow">
                 <div>
-                  <h4 className="text-sm font-bold text-secondary-fixed uppercase tracking-widest mb-3">Advanced Education</h4>
-                  <p className="text-on-primary-container text-sm">
+                  <h4 className={`text-sm font-bold uppercase tracking-widest mb-3 transition-colors duration-500 ${activePathway === 'bpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>Advanced Education</h4>
+                  <p className={`text-sm transition-colors duration-500 ${activePathway === 'bpharm' ? 'text-on-primary-container' : 'text-on-surface-variant'}`}>
                     Options include Master of Pharmacy (M.Pharm), PGDM in Pharmacy, MBA in Pharmaceutical Management, Drug Store Management, and international studies in the USA, Canada, or UK.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-secondary-fixed uppercase tracking-widest mb-3">Business Prospects</h4>
-                  <p className="text-on-primary-container text-sm">
+                  <h4 className={`text-sm font-bold uppercase tracking-widest mb-3 transition-colors duration-500 ${activePathway === 'bpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>Business Prospects</h4>
+                  <p className={`text-sm transition-colors duration-500 ${activePathway === 'bpharm' ? 'text-on-primary-container' : 'text-on-surface-variant'}`}>
                     Unique authority to establish independent ventures such as retail drugstores, wholesale distribution supply, or small-scale manufacturing units.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-secondary-fixed uppercase tracking-widest mb-3">
+                  <h4 className={`text-sm font-bold uppercase tracking-widest mb-3 transition-colors duration-500 ${activePathway === 'bpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>
                     Industry {"&"} Government
                   </h4>
-                  <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-on-primary-container pt-1">
+                  <div className={`grid grid-cols-2 gap-x-4 gap-y-2 text-xs pt-1 transition-colors duration-500 ${activePathway === 'bpharm' ? 'text-on-primary-container' : 'text-on-surface-variant'}`}>
                     <span className="flex items-center gap-1">
-                      <span className="w-1 h-1 bg-secondary-fixed rounded-full"></span> Drug Inspector
+                      <span className={`w-1 h-1 rounded-full transition-colors duration-500 ${activePathway === 'bpharm' ? 'bg-secondary-fixed' : 'bg-secondary'}`}></span> Drug Inspector
                     </span>
                     <span className="flex items-center gap-1">
-                      <span className="w-1 h-1 bg-secondary-fixed rounded-full"></span> R{"&"}D Scientist
+                      <span className={`w-1 h-1 rounded-full transition-colors duration-500 ${activePathway === 'bpharm' ? 'bg-secondary-fixed' : 'bg-secondary'}`}></span> R{"&"}D Scientist
                     </span>
                     <span className="flex items-center gap-1">
-                      <span className="w-1 h-1 bg-secondary-fixed rounded-full"></span> QC Associate
+                      <span className={`w-1 h-1 rounded-full transition-colors duration-500 ${activePathway === 'bpharm' ? 'bg-secondary-fixed' : 'bg-secondary'}`}></span> QC Associate
                     </span>
                     <span className="flex items-center gap-1">
-                      <span className="w-1 h-1 bg-secondary-fixed rounded-full"></span> Clinical Research
+                      <span className={`w-1 h-1 rounded-full transition-colors duration-500 ${activePathway === 'bpharm' ? 'bg-secondary-fixed' : 'bg-secondary'}`}></span> Clinical Research
                     </span>
                     <span className="flex items-center gap-1">
-                      <span className="w-1 h-1 bg-secondary-fixed rounded-full"></span> Health Inspector
+                      <span className={`w-1 h-1 rounded-full transition-colors duration-500 ${activePathway === 'bpharm' ? 'bg-secondary-fixed' : 'bg-secondary'}`}></span> Health Inspector
                     </span>
                     <span className="flex items-center gap-1">
-                      <span className="w-1 h-1 bg-secondary-fixed rounded-full"></span> Med Representative
+                      <span className={`w-1 h-1 rounded-full transition-colors duration-500 ${activePathway === 'bpharm' ? 'bg-secondary-fixed' : 'bg-secondary'}`}></span> Med Representative
                     </span>
                   </div>
                 </div>
@@ -394,27 +438,36 @@ export default function Academics() {
             </div>
 
             {/* M.Pharm Pathways */}
-            <div className="flex flex-col bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/20">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-secondary/10 text-secondary rounded-xl mb-6">
+            <div
+              onMouseEnter={() => setActivePathway('mpharm')}
+              className={`flex flex-col p-8 rounded-2xl transition-all duration-500 cursor-pointer ${
+                activePathway === 'mpharm'
+                  ? 'bg-primary text-white shadow-xl transform lg:-translate-y-6'
+                  : 'bg-white shadow-sm border border-outline-variant/20'
+              }`}
+            >
+              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 transition-colors duration-500 ${
+                activePathway === 'mpharm' ? 'bg-white/10 text-white' : 'bg-secondary/10 text-secondary'
+              }`}>
                 <span className="material-symbols-outlined text-3xl">biotech</span>
               </div>
-              <h3 className="text-2xl font-headline text-primary mb-6">M.Pharm Pathways</h3>
-              <div className="space-y-8 flex-grow inter">
+              <h3 className={`text-2xl font-headline mb-6 transition-colors duration-500 ${activePathway === 'mpharm' ? 'text-white' : 'text-primary'}`}>M.Pharm Pathways</h3>
+              <div className="space-y-8 flex-grow">
                 <div>
-                  <h4 className="text-sm font-bold text-secondary uppercase tracking-widest mb-3">Specialist Education</h4>
-                  <p className="text-on-surface-variant">
+                  <h4 className={`text-sm font-bold uppercase tracking-widest mb-3 transition-colors duration-500 ${activePathway === 'mpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>Specialist Education</h4>
+                  <p className={`transition-colors duration-500 ${activePathway === 'mpharm' ? 'text-on-primary-container text-sm' : 'text-on-surface-variant'}`}>
                     Preparation for competitive exams (KAS, UPSC) and advanced PhD opportunities in India or premier international research institutions.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-secondary uppercase tracking-widest mb-3">Industrial Leadership</h4>
-                  <p className="text-on-surface-variant text-sm">
+                  <h4 className={`text-sm font-bold uppercase tracking-widest mb-3 transition-colors duration-500 ${activePathway === 'mpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>Industrial Leadership</h4>
+                  <p className={`text-sm transition-colors duration-500 ${activePathway === 'mpharm' ? 'text-on-primary-container' : 'text-on-surface-variant'}`}>
                     Strategic roles in Production, Research {"&"} Development (R{"&"}D), Pharmaceutical Marketing, QA/QC leadership, Regulatory Affairs, and Pharmacovigilance.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-secondary uppercase tracking-widest mb-3">Entrepreneurship</h4>
-                  <p className="text-on-surface-variant">
+                  <h4 className={`text-sm font-bold uppercase tracking-widest mb-3 transition-colors duration-500 ${activePathway === 'mpharm' ? 'text-secondary-fixed' : 'text-secondary'}`}>Entrepreneurship</h4>
+                  <p className={`transition-colors duration-500 ${activePathway === 'mpharm' ? 'text-on-primary-container text-sm' : 'text-on-surface-variant'}`}>
                     Leveraging advanced specialization for high-end self-employment and specialized pharmaceutical business ventures.
                   </p>
                 </div>
@@ -448,7 +501,7 @@ export default function Academics() {
               </p>
               <div className="bg-surface p-4 rounded border-l-4 border-secondary">
                 <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-1">Marking Scheme</p>
-                <p className="text-lg font-bold text-primary">80/80 Pattern (Theory/Practical)</p>
+                <p className="text-lg font-bold text-primary">80/20 Pattern (Theory/Practical)</p>
               </div>
             </div>
             <div className="space-y-6">
