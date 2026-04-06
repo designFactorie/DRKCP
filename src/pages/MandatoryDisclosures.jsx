@@ -201,12 +201,12 @@ export default function MandatoryDisclosures() {
             For queries regarding any regulatory or scholarship applications, please contact the college administrative office.
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <a href="mailto:admissions@drkcp.edu.in" className="bg-secondary text-white px-10 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:shadow-secondary/50 transition-all active:scale-95">
+            <a href="mailto:drkcph@gmail.com" className="bg-secondary text-white px-10 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:shadow-secondary/50 transition-all active:scale-95">
               Contact Administration
             </a>
-            <a className="text-white/80 hover:text-white border-b border-white/30 pb-1 font-medium flex items-center gap-2 transition-all" href="tel:+919448105455">
+            <a className="text-white/80 hover:text-white border-b border-white/30 pb-1 font-medium flex items-center gap-2 transition-all" href="tel:+919945914800">
               <span className="material-symbols-outlined text-sm">call</span>
-              +91 94481 05455
+              +91 9945914800
             </a>
           </div>
         </div>

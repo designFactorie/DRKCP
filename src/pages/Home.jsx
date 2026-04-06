@@ -176,93 +176,47 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {/* Testimonial 1 */}
             <div className="relative p-8 bg-surface-container-lowest rounded-xl shadow-lg border-t-4 border-secondary">
-              <div className="absolute -top-6 left-8 flex items-center">
-                <div className="relative">
-                  <img
-                    alt="Alumni Portrait"
-                    className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
-                    data-alt="Professional studio headshot of a female pharmacist with a warm smile, wearing clinical attire, circular crop"
-                    src={`${import.meta.env.BASE_URL}images/img-09.jpg`}
-                  />
-                  <span className="absolute bottom-0 right-0 bg-secondary text-white p-1 rounded-full text-[10px] flex items-center justify-center border-2 border-white">
-                    <span className="material-symbols-outlined text-[12px]" data-icon="verified" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                  </span>
-                </div>
+              <div className="flex gap-1 text-secondary-fixed-dim mb-4">
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
               </div>
-              <div className="mt-8">
-                <div className="flex gap-1 text-secondary-fixed-dim mb-4">
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                </div>
-                <p className="text-on-surface-variant italic leading-relaxed mb-6">"The research-centric environment at Karigowda College helped me develop the precision required for my current role at a global pharmaceutical firm."</p>
-                <div>
-                  <p className="font-bold text-primary">Ananya Sharma</p>
-                  <p className="text-xs text-outline uppercase tracking-wider">Clinical Researcher, Pfizer</p>
-                </div>
+              <p className="text-on-surface-variant italic leading-relaxed mb-6">"The research-centric environment at Karigowda College helped me develop the precision required for my current role at a global pharmaceutical firm."</p>
+              <div>
+                <p className="font-bold text-primary">Naveen</p>
+                <p className="text-xs text-outline uppercase tracking-wider">Alumni</p>
               </div>
             </div>
-            {/* Testimonial 2 (Active Style) */}
-            <div className="relative p-8 bg-white rounded-xl shadow-2xl border-t-4 border-secondary scale-105 z-10">
-              <div className="absolute -inset-2 bg-secondary/5 blur-2xl -z-10 rounded-full"></div>
-              <div className="absolute -top-6 left-8 flex items-center">
-                <div className="relative">
-                  <img
-                    alt="Alumni Portrait"
-                    className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
-                    data-alt="Candid professional portrait of a young male pharmacist in a modern pharmacy setting, smiling, circular crop"
-                    src={`${import.meta.env.BASE_URL}images/img-21.jpg`}
-                  />
-                  <span className="absolute bottom-0 right-0 bg-secondary text-white p-1 rounded-full text-[10px] flex items-center justify-center border-2 border-white">
-                    <span className="material-symbols-outlined text-[12px]" data-icon="verified" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                  </span>
-                </div>
+            {/* Testimonial 2 */}
+            <div className="relative p-8 bg-surface-container-lowest rounded-xl shadow-lg border-t-4 border-secondary">
+              <div className="flex gap-1 text-secondary-fixed-dim mb-4">
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
               </div>
-              <div className="mt-8">
-                <div className="flex gap-1 text-secondary mb-4">
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                </div>
-                <p className="text-primary font-medium italic leading-relaxed mb-6">"Pioneering excellence is not just a tagline here--it's a daily practice. The faculty's mentorship is unparalleled."</p>
-                <div>
-                  <p className="font-bold text-primary">Rahul Mehta</p>
-                  <p className="text-xs text-outline uppercase tracking-wider">M.Pharm Scholar, 2024</p>
-                </div>
+              <p className="text-on-surface-variant italic leading-relaxed mb-6">"Pioneering excellence is not just a tagline here--it's a daily practice. The faculty's mentorship is unparalleled."</p>
+              <div>
+                <p className="font-bold text-primary">Bhoomika</p>
+                <p className="text-xs text-outline uppercase tracking-wider">Alumni</p>
               </div>
             </div>
             {/* Testimonial 3 */}
             <div className="relative p-8 bg-surface-container-lowest rounded-xl shadow-lg border-t-4 border-secondary">
-              <div className="absolute -top-6 left-8 flex items-center">
-                <div className="relative">
-                  <img
-                    alt="Alumni Portrait"
-                    className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
-                    data-alt="Professional studio portrait of a confident female alumni pharmacist, wearing academic graduation stole, circular crop"
-                    src={`${import.meta.env.BASE_URL}images/img-03.jpg`}
-                  />
-                  <span className="absolute bottom-0 right-0 bg-secondary text-white p-1 rounded-full text-[10px] flex items-center justify-center border-2 border-white">
-                    <span className="material-symbols-outlined text-[12px]" data-icon="verified" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                  </span>
-                </div>
+              <div className="flex gap-1 text-secondary-fixed-dim mb-4">
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
               </div>
-              <div className="mt-8">
-                <div className="flex gap-1 text-secondary-fixed-dim mb-4">
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                  <span className="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                </div>
-                <p className="text-on-surface-variant italic leading-relaxed mb-6">"The transition from college to industry was seamless thanks to the high-tech lab training we received."</p>
-                <div>
-                  <p className="font-bold text-primary">Sanya Iyer</p>
-                  <p className="text-xs text-outline uppercase tracking-wider">Quality Control Head, Biocon</p>
-                </div>
+              <p className="text-on-surface-variant italic leading-relaxed mb-6">"The transition from college to industry was seamless thanks to the high-tech lab training we received."</p>
+              <div>
+                <p className="font-bold text-primary">Dhanush</p>
+                <p className="text-xs text-outline uppercase tracking-wider">QA, Micro Lab</p>
               </div>
             </div>
           </div>
@@ -314,15 +268,15 @@ export default function Home() {
             <div className="space-y-6">
               <div className="flex gap-4">
                 <span className="material-symbols-outlined text-secondary" data-icon="home_pin">home_pin</span>
-                <p className="text-outline text-sm leading-relaxed">NDRK Group of Institutions, Behind Akashwani, B.M. Road, Hassan - 573201, Karnataka, India.</p>
+                <p className="text-outline text-sm leading-relaxed">D.R.Karigowda College of Pharmacy, Udayagiri, Kuvempunagar, Hassan 573201, Karnataka, India.</p>
               </div>
               <div className="flex gap-4">
                 <span className="material-symbols-outlined text-secondary" data-icon="call">call</span>
-                <p className="text-outline text-sm font-semibold">+91 94481 05455 / +91 8172 233748</p>
+                <p className="text-outline text-sm font-semibold">+91 9945914800 / +91 7899599188</p>
               </div>
               <div className="flex gap-4">
                 <span className="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
-                <p className="text-outline text-sm">admissions@drkcp.edu.in</p>
+                <p className="text-outline text-sm">drkcph@gmail.com</p>
               </div>
             </div>
             <button className="mt-8 w-full border-2 border-primary text-primary font-bold py-3 rounded-lg hover:bg-primary hover:text-white transition-all">
