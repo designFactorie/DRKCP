@@ -44,9 +44,6 @@ export default function Footer() {
               <span className="text-white/40 font-bold text-xs uppercase">PCI</span>
             </div>
             <div className="bg-white/5 p-4 rounded flex items-center justify-center">
-              <span className="text-white/40 font-bold text-xs uppercase">AICTE</span>
-            </div>
-            <div className="col-span-2 bg-white/5 p-4 rounded flex items-center justify-center">
               <span className="text-white/40 font-bold text-xs uppercase">RGUHS Affiliated</span>
             </div>
           </div>
@@ -54,7 +51,7 @@ export default function Footer() {
       </div>
       <div className="max-w-7xl mx-auto px-12 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-slate-500 font-label text-[10px] uppercase tracking-[0.2em]">
-          &copy; 2024 D.R. Karigowda College of Pharmacy. Accredited by PCI &amp; AICTE.
+          &copy; 2024 D.R. Karigowda College of Pharmacy. Accredited by PCI. Affiliated to RGUHS.
         </p>
         <div className="flex gap-8">
           <a className="text-slate-500 hover:text-white text-[10px] uppercase tracking-widest transition-colors" href="#">Terms</a>
