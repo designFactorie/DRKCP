@@ -6,7 +6,9 @@ export default function Footer() {
       <div className="absolute inset-x-0 top-0 h-1 bg-secondary" />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-7xl mx-auto mb-20">
         <div className="space-y-6">
-          <Link to="/" className="font-headline italic text-3xl text-white font-bold mb-4 block">DRKCP</Link>
+          <Link to="/" className="mb-4 block">
+            <img src={`${import.meta.env.BASE_URL}images/drkcp-logo.png`} alt="DRKCP Logo" className="h-28 brightness-0 invert" />
+          </Link>
           <p className="text-slate-400 text-sm leading-relaxed mb-6">
             A premier institution dedicated to the pharmaceutical arts and sciences, fostering a culture of rigorous inquiry and clinical mastery.
           </p>

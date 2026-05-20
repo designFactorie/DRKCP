@@ -12,26 +12,27 @@ export default function Navbar() {
     { to: '/campus-life', label: 'Campus Life & Support' },
     { to: '/important-links', label: 'Important Links' },
     { to: '/disclosures', label: 'Disclosures' },
+    { to: '/contact', label: 'Contact Us' },
   ]
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm">
-      <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
+    <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm h-16">
+      <div className="flex justify-between items-center px-6 md:px-8 h-16 max-w-screen-2xl mx-auto">
         <div className="flex items-center gap-3">
-          <Link to="/" className="font-headline italic text-xl font-bold text-primary-container tracking-tight">
-            D.R.K.C.P.
+          <Link to="/" className="block -my-6">
+            <img src={`${import.meta.env.BASE_URL}images/drkcp-logo.png`} alt="DRKCP Logo" className="h-28 drop-shadow-lg" />
           </Link>
         </div>
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {links.map(({ to, label }) => (
             <Link
               key={to}
               to={to}
               className={
                 pathname === to
-                  ? 'text-secondary border-b-2 border-secondary pb-1 font-medium transition-all'
-                  : 'text-outline hover:text-primary-container transition-colors'
+                  ? 'text-secondary border-b-2 border-secondary pb-1 font-medium transition-all text-sm'
+                  : 'text-outline hover:text-primary-container transition-colors text-sm'
               }
             >
               {label}
@@ -39,9 +40,9 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex items-center gap-4">
-          <button className="hidden md:block bg-primary text-on-primary px-6 py-2.5 rounded-lg font-medium hover:bg-primary-container transition-all active:scale-95 shadow-lg shadow-primary/20">
+          <Link to="/contact#enquiry-form" className="hidden md:block bg-primary text-on-primary px-6 py-2.5 rounded-lg font-medium hover:bg-primary-container transition-all active:scale-95 shadow-lg shadow-primary/20">
             Apply Now
-          </button>
+          </Link>
           {/* Mobile hamburger */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-2"
@@ -71,9 +72,9 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <button className="mt-2 bg-primary text-on-primary px-6 py-3 rounded-lg font-medium hover:bg-primary-container transition-all active:scale-95 shadow-lg shadow-primary/20 md:hidden">
+          <Link to="/contact#enquiry-form" className="mt-2 bg-primary text-on-primary px-6 py-3 rounded-lg font-medium hover:bg-primary-container transition-all active:scale-95 shadow-lg shadow-primary/20 md:hidden text-center" onClick={() => setMenuOpen(false)}>
             Apply Now
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

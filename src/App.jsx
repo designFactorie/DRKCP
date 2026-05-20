@@ -8,6 +8,7 @@ import Academics from './pages/Academics'
 import CampusLife from './pages/CampusLife'
 import ImportantLinks from './pages/MandatoryDisclosures'
 import MandatoryDisclosuresPage from './pages/MandatoryDisclosuresPage'
+import ContactUs from './pages/ContactUs'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/campus-life" element={<CampusLife />} />
           <Route path="/important-links" element={<ImportantLinks />} />
           <Route path="/disclosures" element={<MandatoryDisclosuresPage />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
         <Footer />
       </div>

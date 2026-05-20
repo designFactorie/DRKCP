@@ -232,11 +232,11 @@ export default function Home() {
             Admissions are now open for the 2026 Academic Year. Join a community of scholars dedicated to clinical excellence and pharmaceutical innovation.
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <button className="relative bg-secondary text-white px-10 py-5 rounded-lg font-bold text-xl hover:shadow-2xl hover:shadow-secondary/50 transition-all active:scale-95 group">
+            <a href="#/contact#enquiry-form" className="relative bg-secondary text-white px-10 py-5 rounded-lg font-bold text-xl hover:shadow-2xl hover:shadow-secondary/50 transition-all active:scale-95 group">
               <span className="absolute inset-0 rounded-lg bg-secondary animate-ping opacity-25 group-hover:hidden"></span>
               Apply Now
-            </button>
-            <a className="text-white/80 hover:text-white border-b border-white/30 pb-1 font-medium flex items-center gap-2 transition-all" href="#">
+            </a>
+            <a className="text-white/80 hover:text-white border-b border-white/30 pb-1 font-medium flex items-center gap-2 transition-all" href={`${import.meta.env.BASE_URL}documents/NDRK-Pharma-Updated_flyer.pdf`} download>
               Download Brochure <span className="material-symbols-outlined text-sm" data-icon="download">download</span>
             </a>
           </div>
@@ -247,12 +247,13 @@ export default function Home() {
       <section className="h-[600px] relative w-full overflow-hidden">
         <div className="absolute inset-0 bg-[#1A237E]/20 z-10 pointer-events-none"></div>
         <div className="w-full h-full bg-primary-container flex items-center justify-center">
-          <img
-            alt="Map view"
-            className="w-full h-full object-cover mix-blend-overlay opacity-30"
-            data-alt="Stylized map view of Hassan city area with medical blue tint and minimal administrative details"
-            data-location="Hassan, Karnataka, India"
-            src={`${import.meta.env.BASE_URL}images/img-01.jpg`}
+          <iframe
+            title="D.R.Karigowda College of Pharmacy Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.5!2d76.1151033!3d13.0109542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5482e5d5013b3%3A0xf802216f959a8e20!2sD.%20R.%20Karigowda%20College%20of%20Pharmacy!5e0!3m2!1sen!2sin!4v1700000000000"
+            className="w-full h-full border-0"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           />
           {/* Map Overlay Card */}
           <div className="absolute z-20 left-12 top-1/2 -translate-y-1/2 bg-white p-10 rounded-xl shadow-2xl max-w-md">
@@ -272,24 +273,27 @@ export default function Home() {
               </div>
               <div className="flex gap-4">
                 <span className="material-symbols-outlined text-secondary" data-icon="call">call</span>
-                <p className="text-outline text-sm font-semibold">+91 9945914800 / +91 7899599188</p>
+                <div className="text-outline text-sm font-semibold space-y-1">
+                  <p>+91-9945914800, 9035990218</p>
+                  <p>7760585096, 7899599188</p>
+                </div>
               </div>
               <div className="flex gap-4">
                 <span className="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
                 <p className="text-outline text-sm">drkcph@gmail.com</p>
               </div>
             </div>
-            <button className="mt-8 w-full border-2 border-primary text-primary font-bold py-3 rounded-lg hover:bg-primary hover:text-white transition-all">
+            <a href="https://maps.app.goo.gl/HGg8sPH5DPnLkbg48" target="_blank" rel="noopener noreferrer" className="mt-8 w-full border-2 border-primary text-primary font-bold py-3 rounded-lg hover:bg-primary hover:text-white transition-all block text-center">
               Get Directions
-            </button>
+            </a>
           </div>
-          {/* Custom Marker */}
-          <div className="absolute z-20 top-1/2 right-1/4">
-            <div className="relative flex items-center justify-center">
+          {/* Custom Marker - positioned over the Google Maps red pin */}
+          <div className="absolute z-20" style={{ top: '48%', left: '50%', transform: 'translate(-50%, -100%)' }}>
+            <div className="relative flex flex-col items-center">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl animate-bounce">
                 <span className="material-symbols-outlined text-secondary text-3xl" data-icon="school">school</span>
               </div>
-              <div className="absolute -bottom-2 w-4 h-4 bg-white rotate-45"></div>
+              <div className="w-4 h-4 bg-white rotate-45 -mt-2 shadow-lg"></div>
             </div>
           </div>
         </div>

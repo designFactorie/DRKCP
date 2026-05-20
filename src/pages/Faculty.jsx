@@ -272,9 +272,9 @@ export default function Faculty() {
                 Join the next cohort of clinical innovators. Our admissions for the upcoming academic year are now open for B. Pharm and D. Pharm programs.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button className="bg-secondary-container text-on-secondary-container px-10 py-4 rounded font-bold hover:scale-[1.02] transition-transform">
+                <a href="#/contact#enquiry-form" className="bg-secondary-container text-on-secondary-container px-10 py-4 rounded font-bold hover:scale-[1.02] transition-transform">
                   Apply Now
-                </button>
+                </a>
                 <button className="border border-white/30 text-white px-10 py-4 rounded font-bold hover:bg-white/10 transition-colors">
                   Request Prospectus
                 </button>
