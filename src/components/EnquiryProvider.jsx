@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react'
-import { createPortal } from 'react-dom'
 import { EnquiryContext } from './enquiry-context'
 import EnquiryForm from './EnquiryForm'
+import { trackEvent } from '../lib/analytics.mjs'
 
 export default function EnquiryProvider({ children }) {
   const dialog = useRef(null)
@@ -17,6 +17,7 @@ export default function EnquiryProvider({ children }) {
     opener.current = document.activeElement
     previousOverflow.current = document.body.style.overflow
     dialog.current.showModal()
+    trackEvent('enquiry_open')
     document.body.style.overflow = 'hidden'
   }, [])
   const closeEnquiry = () => {
@@ -31,7 +32,6 @@ export default function EnquiryProvider({ children }) {
   return (
     <EnquiryContext.Provider value={openEnquiry}>
       {children}
-      {createPortal(
         <dialog ref={dialog} className="enquiry-dialog" aria-labelledby="enquiry-title" aria-describedby="enquiry-description"
           onKeyDown={(event) => {
             if (event.key !== 'Tab') return
@@ -69,7 +69,7 @@ export default function EnquiryProvider({ children }) {
             </button>
           </div>
           <div className="enquiry-dialog-body"><EnquiryForm admissions /></div>
-        </dialog>, document.body)}
+        </dialog>
     </EnquiryContext.Provider>
   )
 }

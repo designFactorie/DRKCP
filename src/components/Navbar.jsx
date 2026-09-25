@@ -3,18 +3,19 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function Navbar() {
-  const { pathname } = useLocation()
+  const { pathname: rawPathname } = useLocation()
+  const pathname = rawPathname === '/' ? '/' : rawPathname.replace(/\/+$/, '') + '/'
   const openEnquiry = useEnquiry()
   const [menuOpen, setMenuOpen] = useState(false)
 
   const links = [
     { to: '/', label: 'Home' },
-    { to: '/faculty', label: 'Faculty & Leadership' },
-    { to: '/academics', label: 'Academics & Careers' },
-    { to: '/campus-life', label: 'Campus Life & Support' },
-    { to: '/important-links', label: 'Important Links' },
-    { to: '/disclosures', label: 'Disclosures' },
-    { to: '/contact', label: 'Contact Us' },
+    { to: '/faculty/', label: 'Faculty & Leadership' },
+    { to: '/academics/', label: 'Academics & Careers' },
+    { to: '/campus-life/', label: 'Campus Life & Support' },
+    { to: '/important-links/', label: 'Important Links' },
+    { to: '/disclosures/', label: 'Disclosures' },
+    { to: '/contact/', label: 'Contact Us' },
   ]
 
   return (
@@ -22,7 +23,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center px-6 md:px-8 h-16 max-w-screen-2xl mx-auto">
         <div className="flex items-center gap-3">
           <Link to="/" onClick={() => setMenuOpen(false)} className="block shrink-0 -my-6" aria-label="College homepage">
-            <img src={`${import.meta.env.BASE_URL}images/drkcp-logo.png`} alt="DRKCP Logo" className="h-28 w-auto max-w-none drop-shadow-lg" />
+            <img src={`${import.meta.env.BASE_URL}images/drkcp-logo.png`} width="1920" height="1080" alt="D.R. Karigowda College of Pharmacy" className="h-28 w-auto max-w-none drop-shadow-lg" />
           </Link>
         </div>
         {/* Desktop nav */}

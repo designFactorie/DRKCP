@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Academics() {
   const [activePathway, setActivePathway] = useState('bpharm')
@@ -9,7 +10,7 @@ export default function Academics() {
       {/* Hero Section */}
       <section className="relative min-h-[300px] md:min-h-[360px] pt-28 pb-12 flex items-center overflow-hidden bg-primary-container">
         <div className="absolute inset-0 opacity-40">
-          <img
+          <img width="512" height="512"
             alt=""
             className="w-full h-full object-cover"
             src={`${import.meta.env.BASE_URL}images/img-04.jpg`}
@@ -53,17 +54,17 @@ export default function Academics() {
                   </thead>
                   <tbody className="divide-y divide-surface-variant/30">
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-4 py-4 font-semibold">Diploma in Pharmacy</td>
+                      <td className="px-4 py-4 font-semibold"><Link className="text-secondary underline" to="/courses/d-pharm/">Diploma in Pharmacy</Link></td>
                       <td className="px-4 py-4 text-secondary font-medium">D.Pharm</td>
                       <td className="px-4 py-4">2 Years + 500 Hours Practical</td>
                     </tr>
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-4 py-4 font-semibold">Bachelor of Pharmacy</td>
+                      <td className="px-4 py-4 font-semibold"><Link className="text-secondary underline" to="/courses/b-pharm/">Bachelor of Pharmacy</Link></td>
                       <td className="px-4 py-4 text-secondary font-medium">B.Pharm</td>
                       <td className="px-4 py-4">4 Years (8 Semesters)</td>
                     </tr>
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-4 py-4 font-semibold">Master of Pharmacy</td>
+                      <td className="px-4 py-4 font-semibold"><Link className="text-secondary underline" to="/courses/m-pharm/">Master of Pharmacy</Link></td>
                       <td className="px-4 py-4 text-secondary font-medium">M.Pharm</td>
                       <td className="px-4 py-4">2 Years (4 Semesters)</td>
                     </tr>
@@ -81,6 +82,7 @@ export default function Academics() {
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl font-headline text-primary mb-4">Admissions Hub</h2>
             <p className="text-on-surface-variant">Detailed criteria and documentation for prospective scholars.</p>
+            <Link to="/admissions/" className="inline-block mt-4 text-secondary underline">View the admission enquiry guide</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8" onMouseLeave={() => setActiveAdmission('bpharm')}>
             {/* D.Pharm Card */}
@@ -222,7 +224,7 @@ export default function Academics() {
             {/* D.Pharm Detail */}
             <div id="dpharm" className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="order-2 lg:order-1">
-                <img loading="lazy" decoding="async"
+                <img width="512" height="512" loading="lazy" decoding="async"
                   alt=""
                   className="rounded-xl shadow-lg w-full aspect-video object-cover"
                   src={`${import.meta.env.BASE_URL}images/img-07.jpg`}
@@ -286,7 +288,7 @@ export default function Academics() {
                 </div>
               </div>
               <div>
-                <img loading="lazy" decoding="async"
+                <img width="512" height="512" loading="lazy" decoding="async"
                   alt=""
                   className="rounded-xl shadow-lg w-full aspect-video object-cover"
                   src={`${import.meta.env.BASE_URL}images/img-06.jpg`}
@@ -297,7 +299,7 @@ export default function Academics() {
             {/* M.Pharm Detail */}
             <div id="mpharm" className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="order-2 lg:order-1">
-                <img loading="lazy" decoding="async"
+                <img width="512" height="512" loading="lazy" decoding="async"
                   alt=""
                   className="rounded-xl shadow-lg w-full aspect-video object-cover"
                   src={`${import.meta.env.BASE_URL}images/img-12.jpg`}

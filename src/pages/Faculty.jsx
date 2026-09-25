@@ -31,7 +31,7 @@ export default function Faculty() {
           </div>
           <div className="lg:col-span-5 relative">
             <div className="h-[280px] sm:h-[360px] lg:h-[420px] rounded-xl overflow-hidden shadow-2xl relative z-10">
-              <img alt="D.R. Karigowda College of Pharmacy building" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/drkcp-building.webp`} />
+              <img width="1200" height="1490" alt="D.R. Karigowda College of Pharmacy building" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/drkcp-building.webp`} />
             </div>
             {/* Asymmetric Decorative Element */}
             <div className="absolute -bottom-6 -left-6 w-full h-full bg-secondary-container -z-10 rounded-xl translate-x-12 translate-y-12 opacity-30"></div>
@@ -88,7 +88,7 @@ export default function Faculty() {
           {/* Chairperson */}
           <div className="group">
             <div className="relative h-[240px] sm:h-[280px] overflow-hidden rounded-xl mb-6 shadow-lg border-b-4 border-secondary transition-all group-hover:shadow-xl group-hover:-translate-y-1">
-              <img loading="lazy" decoding="async" alt="Mrs Manjula Prasad, Chairperson" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src={`${import.meta.env.BASE_URL}images/img-11.jpg`} />
+              <img width="512" height="512" loading="lazy" decoding="async" alt="Mrs Manjula Prasad, Chairperson" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src={`${import.meta.env.BASE_URL}images/img-11.jpg`} />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <h3 className="font-headline text-2xl text-primary mb-1">Mrs Manjula Prasad</h3>
@@ -97,7 +97,7 @@ export default function Faculty() {
           {/* Managing Director */}
           <div className="group">
             <div className="relative h-[240px] sm:h-[280px] overflow-hidden rounded-xl mb-6 shadow-lg border-b-4 border-secondary transition-all group-hover:shadow-xl group-hover:-translate-y-1">
-              <img loading="lazy" decoding="async" alt="Mr. Suhas Prasad, Managing Director" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src={`${import.meta.env.BASE_URL}images/suhas-prasad.webp`} />
+              <img width="1200" height="1182" loading="lazy" decoding="async" alt="Mr. Suhas Prasad, Managing Director" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src={`${import.meta.env.BASE_URL}images/suhas-prasad.webp`} />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <h3 className="font-headline text-2xl text-primary mb-1">Mr. Suhas Prasad</h3>
@@ -106,7 +106,7 @@ export default function Faculty() {
           {/* Principal */}
           <div className="group">
             <div className="relative h-[240px] sm:h-[280px] overflow-hidden rounded-xl mb-6 shadow-lg border-b-4 border-secondary transition-all group-hover:shadow-xl group-hover:-translate-y-1">
-              <img loading="lazy" decoding="async" alt="Dr. Meena Purohit, Principal" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src={`${import.meta.env.BASE_URL}images/meena-purohit.webp`} />
+              <img width="1200" height="1182" loading="lazy" decoding="async" alt="Dr. Meena Purohit, Principal" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src={`${import.meta.env.BASE_URL}images/meena-purohit.webp`} />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <h3 className="font-headline text-2xl text-primary mb-1">Dr. Meena Purohit</h3>
@@ -167,7 +167,7 @@ export default function Faculty() {
               <div className="w-full aspect-video rounded-xl overflow-hidden bg-surface-variant">
                 {/* Simulated Map/Artistic Map */}
                 <div className="w-full h-full relative" data-location="Hassan, India">
-                  <img loading="lazy" decoding="async" alt="Illustration of Hassan city" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/img-17.jpg`} />
+                  <img width="512" height="512" loading="lazy" decoding="async" alt="Illustration of Hassan city" className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/img-17.jpg`} />
                   <div className="absolute inset-0 bg-primary/20 backdrop-grayscale-[0.5]"></div>
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                     <div className="bg-white p-3 rounded-full shadow-lg">
