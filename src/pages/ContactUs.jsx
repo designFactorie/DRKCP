@@ -3,11 +3,11 @@ import { useEnquiry } from '../components/enquiry-context'
 export default function ContactUs() {
   const openEnquiry = useEnquiry()
   return (
-    <main className="bg-surface">
+    <div className="bg-surface">
       {/* Hero Header */}
       <section className="relative min-h-[300px] md:min-h-[340px] pt-28 pb-12 px-5 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img alt="College campus"
+          <img width="512" height="512" alt="College campus"
             className="w-full h-full object-cover"
             src={`${import.meta.env.BASE_URL}images/img-08.jpg`}
           />
@@ -190,6 +190,6 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

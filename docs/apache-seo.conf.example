@@ -1,0 +1,21 @@
+# Review with the hosting administrator; not a drop-in complete TLS config.
+# Requires mod_rewrite, mod_proxy and mod_proxy_http. Keep existing TLS settings.
+# The Node app should listen privately on 127.0.0.1:3000 under a supervisor.
+
+# Inside the port 80 vhost serving drkpharma.edu.in and www.drkpharma.edu.in:
+# RewriteEngine On
+# RewriteRule ^ https://drkpharma.edu.in%{REQUEST_URI} [R=301,L,NE]
+
+# Inside the HTTPS www.drkpharma.edu.in vhost (with a valid www certificate):
+# RewriteEngine On
+# RewriteRule ^ https://drkpharma.edu.in%{REQUEST_URI} [R=301,L,NE]
+
+# Inside the HTTPS drkpharma.edu.in vhost, after keeping its TLS directives:
+# ProxyPreserveHost On
+# ProxyPass / http://127.0.0.1:3000/
+# ProxyPassReverse / http://127.0.0.1:3000/
+
+# This proxies both pre-rendered pages and /api/enquiry to the Node server.
+# Do not add a blanket SPA rewrite to index.html: it would produce soft 404s.
+# Query strings are preserved by these redirect rules. Check for conflicts with
+# existing redirect rules and run apachectl configtest before reloading Apache.

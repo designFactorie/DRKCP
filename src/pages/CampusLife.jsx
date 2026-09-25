@@ -1,10 +1,10 @@
 export default function CampusLife() {
   return (
-    <main className="bg-surface">
+    <div className="bg-surface">
       {/* Hero Header */}
       <section className="relative min-h-[300px] md:min-h-[360px] pt-28 pb-12 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img alt="College campus"
+          <img width="512" height="512" alt="College campus"
             className="w-full h-full object-cover"
             src={`${import.meta.env.BASE_URL}images/img-08.jpg`}
           />
@@ -48,7 +48,7 @@ export default function CampusLife() {
           </div>
           <div className="lg:col-span-5 relative">
             <div className="h-[280px] sm:h-[360px] lg:h-[380px] overflow-hidden rounded-xl shadow-xl rotate-3 hover:rotate-0 transition-transform duration-700">
-              <img loading="lazy" decoding="async" alt="College library"
+              <img width="512" height="512" loading="lazy" decoding="async" alt="College library"
                 className="w-full h-full object-cover"
                 src={`${import.meta.env.BASE_URL}images/img-18.jpg`}
               />
@@ -91,7 +91,7 @@ export default function CampusLife() {
             </div>
             {/* Clinical Space */}
             <div className="relative group overflow-hidden rounded-xl">
-              <img loading="lazy" decoding="async" alt="Pharmaceutical laboratory"
+              <img width="512" height="512" loading="lazy" decoding="async" alt="Pharmaceutical laboratory"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 src={`${import.meta.env.BASE_URL}images/img-16.jpg`}
               />
@@ -148,7 +148,7 @@ export default function CampusLife() {
       <section className="py-12 md:py-16 relative">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2 h-[280px] md:h-[360px] lg:h-auto relative">
-            <img loading="lazy" decoding="async" alt="Medicinal plants in the campus garden"
+            <img width="512" height="512" loading="lazy" decoding="async" alt="Medicinal plants in the campus garden"
               className="w-full h-full object-cover lg:absolute lg:inset-0"
               src={`${import.meta.env.BASE_URL}images/img-20.jpg`}
             />
@@ -180,7 +180,7 @@ export default function CampusLife() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           <div className="flex flex-col gap-6">
             <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-              <img loading="lazy" decoding="async" alt="Student hostel accommodation"
+              <img width="512" height="512" loading="lazy" decoding="async" alt="Student hostel accommodation"
                 className="w-full h-full object-cover"
                 src={`${import.meta.env.BASE_URL}images/img-15.jpg`}
               />
@@ -204,7 +204,7 @@ export default function CampusLife() {
               </div>
             </div>
             <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-              <img loading="lazy" decoding="async" alt="Campus dining facilities"
+              <img width="512" height="512" loading="lazy" decoding="async" alt="Campus dining facilities"
                 className="w-full h-full object-cover"
                 src={`${import.meta.env.BASE_URL}images/img-13.jpg`}
               />
@@ -299,13 +299,13 @@ export default function CampusLife() {
             <p className="text-lg text-on-surface-variant leading-relaxed mb-6">
               Empowering your education journey. We assist students in securing education loans from nationalized banks at competitive interest rates.
             </p>
-            <a href="#/contact" className="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all">
+            <a href="/contact/" className="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all">
               <span>Learn about loan assistance</span>
               <span aria-hidden="true" className="material-symbols-outlined">arrow_forward</span>
             </a>
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

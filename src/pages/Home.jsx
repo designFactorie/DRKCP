@@ -9,7 +9,7 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative flex-grow flex items-center justify-center pt-28 pb-10 px-5 sm:px-8 text-center">
           <div className="absolute inset-0 z-0">
-            <img
+            <img fetchPriority="high" width="512" height="512"
               alt="Laboratory focus"
               className="w-full h-full object-cover"
               src={`${import.meta.env.BASE_URL}images/img-10.jpg`}
@@ -26,10 +26,10 @@ export default function Home() {
               Pioneering Excellence since 2004. Cultivating the next generation of clinical leaders and pharmaceutical innovators.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Link to="/academics" className="bg-secondary text-white px-5 sm:px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-secondary/30 transition-all">
+              <Link to="/academics/" className="bg-secondary text-white px-5 sm:px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-secondary/30 transition-all">
                 Explore Programs
               </Link>
-              <Link to="/campus-life" className="border border-white/30 backdrop-blur-md text-white px-5 sm:px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all">
+              <Link to="/campus-life/" className="border border-white/30 backdrop-blur-md text-white px-5 sm:px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all">
                 Explore Campus
               </Link>
             </div>
@@ -49,7 +49,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="relative group">
             <div className="absolute -inset-4 bg-secondary/5 rounded-2xl transition-all group-hover:scale-105 duration-700"></div>
-            <img loading="lazy" decoding="async"
+            <img width="512" height="512" loading="lazy" decoding="async"
               alt="Pharmacy student"
               className="relative rounded-xl shadow-2xl w-full h-[320px] sm:h-[380px] lg:h-[420px] object-cover"
               src={`${import.meta.env.BASE_URL}images/img-14.jpg`}
@@ -113,7 +113,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-4 group-hover:text-white transition-colors">D.Pharm</h3>
                 <p className="text-outline mb-8 group-hover:text-white/80 transition-colors">A robust 2-year foundation in pharmaceutical sciences for clinical practice.</p>
-                <Link to="/academics#dpharm" className="inline-flex items-center gap-2 text-secondary group-hover:text-white font-semibold rounded focus-visible:outline-offset-4">View Curriculum <span aria-hidden="true" className="material-symbols-outlined">arrow_forward</span></Link>
+                <Link to="/courses/d-pharm/" className="inline-flex items-center gap-2 text-secondary group-hover:text-white font-semibold rounded focus-visible:outline-offset-4">View Curriculum <span aria-hidden="true" className="material-symbols-outlined">arrow_forward</span></Link>
               </div>
               <div className="absolute bottom-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                 <span aria-hidden="true" className="material-symbols-outlined text-9xl" data-icon="medical_services">medical_services</span>
@@ -127,7 +127,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-4 group-hover:text-white transition-colors">B.Pharm</h3>
                 <p className="text-outline mb-8 group-hover:text-white/80 transition-colors">Comprehensive 4-year undergraduate study exploring drug discovery and delivery.</p>
-                <Link to="/academics#bpharm" className="inline-flex items-center gap-2 text-secondary group-hover:text-white font-semibold rounded focus-visible:outline-offset-4">View Curriculum <span aria-hidden="true" className="material-symbols-outlined">arrow_forward</span></Link>
+                <Link to="/courses/b-pharm/" className="inline-flex items-center gap-2 text-secondary group-hover:text-white font-semibold rounded focus-visible:outline-offset-4">View Curriculum <span aria-hidden="true" className="material-symbols-outlined">arrow_forward</span></Link>
               </div>
               <div className="absolute bottom-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                 <span aria-hidden="true" className="material-symbols-outlined text-9xl" data-icon="dna">genetics</span>
@@ -141,7 +141,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-4 group-hover:text-white transition-colors">M.Pharm</h3>
                 <p className="text-outline mb-8 group-hover:text-white/80 transition-colors">Advanced specialization and research-focused postgraduate studies.</p>
-                <Link to="/academics#mpharm" className="inline-flex items-center gap-2 text-secondary group-hover:text-white font-semibold rounded focus-visible:outline-offset-4">View Curriculum <span aria-hidden="true" className="material-symbols-outlined">arrow_forward</span></Link>
+                <Link to="/courses/m-pharm/" className="inline-flex items-center gap-2 text-secondary group-hover:text-white font-semibold rounded focus-visible:outline-offset-4">View Curriculum <span aria-hidden="true" className="material-symbols-outlined">arrow_forward</span></Link>
               </div>
               <div className="absolute bottom-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                 <span aria-hidden="true" className="material-symbols-outlined text-9xl" data-icon="experiment">experiment</span>
@@ -289,7 +289,7 @@ export default function Home() {
             {/* Affiliation 1 */}
             <div className="bg-surface p-4 sm:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
               <div className="h-16 w-full flex items-center justify-center mb-4">
-                <img loading="lazy" decoding="async"
+                <img width="312" height="306" loading="lazy" decoding="async"
                   alt="Government of Karnataka"
                   className="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500"
                   src={`${import.meta.env.BASE_URL}images/img-22.jpg`}
@@ -300,7 +300,7 @@ export default function Home() {
             {/* Affiliation 2 */}
             <div className="bg-surface p-4 sm:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
               <div className="h-16 w-full flex items-center justify-center mb-4">
-                <img loading="lazy" decoding="async"
+                <img width="352" height="350" loading="lazy" decoding="async"
                   alt="Pharmacy Council of India"
                   className="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500"
                   src={`${import.meta.env.BASE_URL}images/img-23.jpg`}
@@ -311,7 +311,7 @@ export default function Home() {
             {/* Affiliation 3 */}
             <div className="bg-surface p-4 sm:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
               <div className="h-16 w-full flex items-center justify-center mb-4">
-                <img loading="lazy" decoding="async"
+                <img width="294" height="267" loading="lazy" decoding="async"
                   alt="RGUHS"
                   className="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500"
                   src={`${import.meta.env.BASE_URL}images/img-24.jpg`}

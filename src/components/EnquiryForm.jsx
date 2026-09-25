@@ -1,5 +1,6 @@
 import { useId, useRef, useState } from 'react'
 import { getEnquiryReceipt, normalizeEnquiry, submitEnquiry } from '../lib/enquiry.mjs'
+import { trackEvent } from '../lib/analytics.mjs'
 
 export default function EnquiryForm({ admissions = false }) {
   const id = useId()
@@ -24,6 +25,7 @@ export default function EnquiryForm({ admissions = false }) {
       const receipt = await getEnquiryReceipt(data)
       const result = await submitEnquiry(data, receipt)
       if (result.ok) {
+        trackEvent('enquiry_saved')
         form.reset()
         setNotice({ ok: true, text: 'Thank you. Your enquiry has been received by D.R. Karigowda College of Pharmacy.' })
       } else {
@@ -45,7 +47,7 @@ export default function EnquiryForm({ admissions = false }) {
   }
 
   return (
-    <form className="enquiry-form" onSubmit={handleSubmit} aria-busy={sending}>
+    <form className="enquiry-form" method="post" action="/api/enquiry" onSubmit={handleSubmit} aria-busy={sending}>
       <fieldset disabled={sending} className="grid gap-4 min-w-0">
       <p className="text-sm text-on-surface-variant">All fields are required. For immediate assistance, call <a className="underline text-secondary" href="tel:+919945914800">+91 9945914800</a>.</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
