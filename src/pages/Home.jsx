@@ -279,54 +279,54 @@ export default function Home() {
       </section>
 
       {/* Section 7: Accreditations & Affiliations */}
-      <section className="py-12 md:py-16 bg-surface-container-lowest">
+      <section className="py-12 md:py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-8 lg:mb-10">
             <h2 className="font-headline text-3xl sm:text-4xl text-primary-container mb-4">Accreditations &amp; <span className="italic">Affiliations</span></h2>
             <div className="w-24 h-1 bg-secondary mx-auto"></div>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {/* Affiliation 1 */}
-            <div className="bg-surface p-4 sm:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
-              <div className="h-16 w-full flex items-center justify-center mb-4">
+            <div className="bg-white p-5 sm:p-6 rounded-2xl shadow-[0_4px_24px_rgba(26,35,126,0.05)] flex flex-col items-center text-center group transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(26,35,126,0.10)] motion-reduce:transform-none">
+              <div className="h-24 sm:h-28 w-full max-w-28 flex items-center justify-center mb-5 shrink-0">
                 <img width="312" height="306" loading="lazy" decoding="async"
                   alt="Government of Karnataka"
-                  className="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-auto h-auto max-h-full max-w-full object-contain grayscale transition-[filter,transform] duration-300 ease-out group-hover:grayscale-0 group-hover:scale-105 motion-reduce:transform-none"
                   src={`${import.meta.env.BASE_URL}images/img-22.jpg`}
                 />
               </div>
-              <h4 className="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Government of Karnataka</h4>
+              <h3 className="text-primary font-semibold text-sm sm:text-base leading-relaxed max-w-[26ch]">Government of Karnataka</h3>
             </div>
             {/* Affiliation 2 */}
-            <div className="bg-surface p-4 sm:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
-              <div className="h-16 w-full flex items-center justify-center mb-4">
+            <div className="bg-white p-5 sm:p-6 rounded-2xl shadow-[0_4px_24px_rgba(26,35,126,0.05)] flex flex-col items-center text-center group transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(26,35,126,0.10)] motion-reduce:transform-none">
+              <div className="h-24 sm:h-28 w-full max-w-28 flex items-center justify-center mb-5 shrink-0">
                 <img width="352" height="350" loading="lazy" decoding="async"
                   alt="Pharmacy Council of India"
-                  className="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-auto h-auto max-h-full max-w-full object-contain grayscale transition-[filter,transform] duration-300 ease-out group-hover:grayscale-0 group-hover:scale-105 motion-reduce:transform-none"
                   src={`${import.meta.env.BASE_URL}images/img-23.jpg`}
                 />
               </div>
-              <h4 className="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Pharmacy Council of India, New Delhi</h4>
+              <h3 className="text-primary font-semibold text-sm sm:text-base leading-relaxed max-w-[26ch]">Pharmacy Council of India, New Delhi</h3>
             </div>
             {/* Affiliation 3 */}
-            <div className="bg-surface p-4 sm:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
-              <div className="h-16 w-full flex items-center justify-center mb-4">
+            <div className="bg-white p-5 sm:p-6 rounded-2xl shadow-[0_4px_24px_rgba(26,35,126,0.05)] flex flex-col items-center text-center group transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(26,35,126,0.10)] motion-reduce:transform-none">
+              <div className="h-24 sm:h-28 w-full max-w-28 flex items-center justify-center mb-5 shrink-0">
                 <img width="294" height="267" loading="lazy" decoding="async"
                   alt="RGUHS"
-                  className="max-h-full max-w-[80%] grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-auto h-auto max-h-full max-w-full object-contain grayscale transition-[filter,transform] duration-300 ease-out group-hover:grayscale-0 group-hover:scale-105 motion-reduce:transform-none"
                   src={`${import.meta.env.BASE_URL}images/img-24.jpg`}
                 />
               </div>
-              <h4 className="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Rajiv Gandhi University of Health Sciences (RGUHS)</h4>
+              <h3 className="text-primary font-semibold text-sm sm:text-base leading-relaxed max-w-[26ch]">Rajiv Gandhi University of Health Sciences (RGUHS)</h3>
             </div>
             {/* Affiliation 4 */}
-            <div className="bg-surface p-4 sm:p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center group hover:border-secondary transition-all duration-300">
-              <div className="h-16 w-full flex items-center justify-center mb-4">
-                <div className="bg-primary/5 rounded-full p-4 flex items-center justify-center">
-                  <span aria-hidden="true" className="material-symbols-outlined text-5xl text-primary/40 group-hover:text-secondary transition-colors" data-icon="account_balance">account_balance</span>
+            <div className="bg-white p-5 sm:p-6 rounded-2xl shadow-[0_4px_24px_rgba(26,35,126,0.05)] flex flex-col items-center text-center group transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(26,35,126,0.10)] motion-reduce:transform-none">
+              <div className="h-24 sm:h-28 w-full max-w-28 flex items-center justify-center mb-5 shrink-0">
+                <div className="bg-primary/5 rounded-full w-20 h-20 flex items-center justify-center">
+                  <svg aria-hidden="true" className="w-10 h-10 text-primary/40 transition-[color,transform] duration-300 ease-out group-hover:text-secondary group-hover:scale-105 motion-reduce:transform-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-6 9 6H3Zm2 11h14M3 22h18M6 12v5m6-5v5m6-5v5" /></svg>
                 </div>
               </div>
-              <h4 className="text-primary font-bold text-sm uppercase tracking-wider leading-relaxed">Board of Examining Authority (BEAD)</h4>
+              <h3 className="text-primary font-semibold text-sm sm:text-base leading-relaxed max-w-[26ch]">Board of Examining Authority (BEAD)</h3>
             </div>
           </div>
         </div>
