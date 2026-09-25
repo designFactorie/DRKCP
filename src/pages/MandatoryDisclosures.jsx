@@ -2,15 +2,15 @@ export default function MandatoryDisclosures() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[614px] flex items-center overflow-hidden bg-primary-container">
+      <section className="relative min-h-[300px] md:min-h-[360px] pt-28 pb-12 flex items-center overflow-hidden bg-primary-container">
         <div className="absolute inset-0 medical-pattern opacity-10"></div>
         <div className="absolute inset-0 clinical-gradient opacity-90"></div>
-        <div className="relative max-w-screen-2xl mx-auto px-8 w-full">
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-8 w-full">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-1 bg-secondary text-white text-xs font-bold tracking-widest uppercase mb-6 rounded-full">
               Transparency {"&"} Compliance
             </span>
-            <h1 className="text-5xl md:text-7xl font-headline text-white leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-headline text-white leading-tight mb-6">
               Important Links
             </h1>
             <p className="text-white/80 text-lg md:text-xl max-w-xl leading-relaxed">
@@ -21,11 +21,11 @@ export default function MandatoryDisclosures() {
       </section>
 
       {/* RGUHS Services */}
-      <section className="py-24 px-8 bg-surface">
+      <section className="py-12 md:py-16 px-5 sm:px-8 bg-surface">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
+          <div className="mb-8 lg:mb-10">
             <h2 className="text-secondary font-semibold tracking-widest text-sm uppercase mb-4">University Services</h2>
-            <h3 className="font-headline text-4xl md:text-5xl text-primary-container leading-tight">
+            <h3 className="font-headline text-3xl md:text-4xl text-primary-container leading-tight">
               RGUHS {"&"} <span className="italic">Examination Portals</span>
             </h3>
           </div>
@@ -77,12 +77,12 @@ export default function MandatoryDisclosures() {
       </section>
 
       {/* Regulatory Bodies */}
-      <section className="py-24 px-8 bg-surface-container-low relative overflow-hidden">
+      <section className="py-12 md:py-16 px-5 sm:px-8 bg-surface-container-low relative overflow-hidden">
         <div className="absolute inset-0 medical-pattern"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="mb-16">
+          <div className="mb-8 lg:mb-10">
             <h2 className="text-secondary font-semibold tracking-widest text-sm uppercase mb-4">Governance</h2>
-            <h3 className="font-headline text-4xl md:text-5xl text-primary-container leading-tight">
+            <h3 className="font-headline text-3xl md:text-4xl text-primary-container leading-tight">
               Regulatory {"&"} <span className="italic">Statutory Bodies</span>
             </h3>
           </div>
@@ -122,11 +122,11 @@ export default function MandatoryDisclosures() {
       </section>
 
       {/* Research Resources */}
-      <section className="py-24 px-8 bg-surface">
+      <section className="py-12 md:py-16 px-5 sm:px-8 bg-surface">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
+          <div className="mb-8 lg:mb-10">
             <h2 className="text-secondary font-semibold tracking-widest text-sm uppercase mb-4">Knowledge Base</h2>
-            <h3 className="font-headline text-4xl md:text-5xl text-primary-container leading-tight">
+            <h3 className="font-headline text-3xl md:text-4xl text-primary-container leading-tight">
               Research <span className="italic">Resources</span>
             </h3>
           </div>
@@ -148,12 +148,12 @@ export default function MandatoryDisclosures() {
       </section>
 
       {/* Scholarships & Welfare */}
-      <section className="py-24 px-8 bg-surface-container-low relative overflow-hidden">
+      <section className="py-12 md:py-16 px-5 sm:px-8 bg-surface-container-low relative overflow-hidden">
         <div className="absolute inset-0 medical-pattern"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="mb-16">
+          <div className="mb-8 lg:mb-10">
             <h2 className="text-secondary font-semibold tracking-widest text-sm uppercase mb-4">Student Support</h2>
-            <h3 className="font-headline text-4xl md:text-5xl text-primary-container leading-tight">
+            <h3 className="font-headline text-3xl md:text-4xl text-primary-container leading-tight">
               Scholarships {"&"} <span className="italic">Welfare Portals</span>
             </h3>
           </div>
@@ -193,10 +193,10 @@ export default function MandatoryDisclosures() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 clinical-gradient overflow-hidden">
+      <section className="relative py-12 md:py-16 clinical-gradient overflow-hidden">
         <div className="absolute inset-0 medical-pattern opacity-10"></div>
-        <div className="max-w-7xl mx-auto px-8 relative z-10 text-center">
-          <h2 className="font-headline text-4xl md:text-5xl text-white mb-8">Need <span className="italic">Assistance?</span></h2>
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10 text-center">
+          <h2 className="font-headline text-3xl md:text-4xl text-white mb-8">Need <span className="italic">Assistance?</span></h2>
           <p className="text-white/80 text-lg mb-12 max-w-2xl mx-auto font-light leading-relaxed">
             For queries regarding any regulatory or scholarship applications, please contact the college administrative office.
           </p>
@@ -205,7 +205,7 @@ export default function MandatoryDisclosures() {
               Contact Administration
             </a>
             <a className="text-white/80 hover:text-white border-b border-white/30 pb-1 font-medium flex items-center gap-2 transition-all" href="tel:+919945914800">
-              <span className="material-symbols-outlined text-sm">call</span>
+              <span aria-hidden="true" className="material-symbols-outlined text-sm">call</span>
               +91 9945914800
             </a>
           </div>
@@ -221,17 +221,17 @@ function LinkCard({ icon, title, description, href }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border-l-4 border-transparent hover:border-secondary"
+      className="group bg-surface-container-lowest p-5 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border-l-4 border-transparent hover:border-secondary"
     >
-      <div className="flex items-start gap-5">
+      <div className="flex items-start gap-3">
         <div className="bg-surface-container-low p-3 rounded-lg text-secondary group-hover:bg-secondary group-hover:text-white transition-colors shrink-0">
-          <span className="material-symbols-outlined text-2xl">{icon}</span>
+          <span aria-hidden="true" className="material-symbols-outlined text-2xl">{icon}</span>
         </div>
-        <div>
+        <div className="min-w-0">
           <h4 className="text-lg font-bold text-primary mb-2 group-hover:text-secondary transition-colors">{title}</h4>
           <p className="text-outline text-sm leading-relaxed">{description}</p>
-          <span className="inline-flex items-center gap-1 text-secondary text-xs font-semibold mt-4 opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-wider">
-            Visit Portal <span className="material-symbols-outlined text-xs">arrow_forward</span>
+          <span className="inline-flex items-center gap-1 text-secondary text-xs font-semibold mt-4 opacity-100 transition-opacity uppercase tracking-wider">
+            Visit Portal <span aria-hidden="true" className="material-symbols-outlined text-xs">arrow_forward</span>
           </span>
         </div>
       </div>
