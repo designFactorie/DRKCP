@@ -1,65 +1,43 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
+
+const academicLinks = ['Academic Calendar', 'Research Portal', 'Student Login', 'Career Center']
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-secondary-fixed pt-24 pb-12 overflow-hidden relative">
-      <div className="absolute inset-x-0 top-0 h-1 bg-secondary" />
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-7xl mx-auto mb-20">
-        <div className="space-y-6">
-          <Link to="/" className="mb-4 block">
-            <img src={`${import.meta.env.BASE_URL}images/drkcp-logo.png`} alt="DRKCP Logo" className="h-28 brightness-0 invert" />
-          </Link>
-          <p className="text-slate-400 text-sm leading-relaxed mb-6">
-            A premier institution dedicated to the pharmaceutical arts and sciences, fostering a culture of rigorous inquiry and clinical mastery.
-          </p>
-          <div className="flex gap-4">
-            <a className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary transition-all text-white" href="#">
-              <span className="material-symbols-outlined text-sm">public</span>
-            </a>
-            <a className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary transition-all text-white" href="#">
-              <span className="material-symbols-outlined text-sm">groups</span>
-            </a>
+    <footer className="bg-primary text-white/80 pt-8 pb-6">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 mb-8">
+        <div>
+          <Link to="/" aria-label="College homepage" className="inline-block"><img src={`${import.meta.env.BASE_URL}images/drkcp-logo.png`} alt="D.R. Karigowda College of Pharmacy" className="h-28 w-auto max-w-none brightness-0 invert" loading="lazy" /></Link>
+          <p className="text-sm leading-relaxed mt-2">A premier institution dedicated to the pharmaceutical arts and sciences, fostering a culture of rigorous inquiry and clinical mastery.</p>
+          <div className="flex gap-3 mt-4" aria-hidden="true">
+            <span className="w-10 h-10 rounded-full bg-white/5 grid place-items-center text-white"><span className="material-symbols-outlined text-sm">public</span></span>
+            <span className="w-10 h-10 rounded-full bg-white/5 grid place-items-center text-white"><span className="material-symbols-outlined text-sm">groups</span></span>
           </div>
         </div>
-        <div>
-          <h5 className="text-white font-bold uppercase tracking-widest text-xs mb-8">Academic Portal</h5>
-          <ul className="space-y-4">
-            <li><a className="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Academic Calendar</a></li>
-            <li><a className="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Research Portal</a></li>
-            <li><a className="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Student Login</a></li>
-            <li><a className="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Career Center</a></li>
+        <div className="lg:pt-8">
+          <h2 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Academic Portal</h2>
+          <ul className="space-y-1 text-sm">{academicLinks.map((label) => <li key={label}><span className="inline-block py-2">{label}</span></li>)}</ul>
+        </div>
+        <div className="lg:pt-8">
+          <h2 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Institutional</h2>
+          <ul className="space-y-1 text-sm">
+            <li><Link className="inline-block py-2 hover:text-secondary-fixed" to="/faculty">About NDRK Group</Link></li>
+            <li><Link className="inline-block py-2 hover:text-secondary-fixed" to="/faculty">Faculty Profiles</Link></li>
+            <li><span className="inline-block py-2">Alumni Network</span></li>
+            <li><span className="inline-block py-2">Privacy Policy</span></li>
           </ul>
         </div>
-        <div>
-          <h5 className="text-white font-bold uppercase tracking-widest text-xs mb-8">Institutional</h5>
-          <ul className="space-y-4">
-            <li><a className="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">About NDRK Group</a></li>
-            <li><Link className="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" to="/faculty">Faculty Profiles</Link></li>
-            <li><a className="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Alumni Network</a></li>
-            <li><a className="text-slate-400 hover:text-secondary text-xs uppercase tracking-widest transition-colors" href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5 className="text-white font-bold uppercase tracking-widest text-xs mb-8">Accreditation</h5>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white/5 p-4 rounded flex items-center justify-center">
-              <span className="text-white/40 font-bold text-xs uppercase">PCI</span>
-            </div>
-            <div className="bg-white/5 p-4 rounded flex items-center justify-center">
-              <span className="text-white/40 font-bold text-xs uppercase">RGUHS Affiliated</span>
-            </div>
+        <div className="lg:pt-8">
+          <h2 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Accreditation</h2>
+          <div className="grid grid-cols-2 gap-3 text-center text-xs font-semibold uppercase">
+            <div className="bg-white/5 p-4 rounded-lg flex items-center justify-center">PCI</div>
+            <div className="bg-white/5 p-4 rounded-lg flex items-center justify-center">RGUHS Affiliated</div>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-12 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p className="text-slate-500 font-label text-[10px] uppercase tracking-[0.2em]">
-          &copy; 2024 D.R. Karigowda College of Pharmacy. Accredited by PCI. Affiliated to RGUHS.
-        </p>
-        <div className="flex gap-8">
-          <a className="text-slate-500 hover:text-white text-[10px] uppercase tracking-widest transition-colors" href="#">Terms</a>
-          <a className="text-slate-500 hover:text-white text-[10px] uppercase tracking-widest transition-colors" href="#">Accessibility</a>
-          <a className="text-slate-500 hover:text-white text-[10px] uppercase tracking-widest transition-colors" href="#">Cookies</a>
-        </div>
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row gap-4 justify-between text-xs text-white/70">
+        <p>© 2024 D.R. Karigowda College of Pharmacy. Accredited by PCI. Affiliated to RGUHS.</p>
+        <div className="flex flex-wrap gap-5"><span>Terms</span><span>Accessibility</span><span>Cookies</span></div>
       </div>
     </footer>
   )

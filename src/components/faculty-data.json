@@ -1,0 +1,200 @@
+[
+  {
+    "number": 1,
+    "name": "Dr. Meena Purohit",
+    "department": "Pharmaceutical Chemistry",
+    "title": "Professor & HOD"
+  },
+  {
+    "number": 2,
+    "name": "Bhagya T S",
+    "department": "Pharmaceutical Chemistry",
+    "title": "Associate Professor"
+  },
+  {
+    "number": 3,
+    "name": "Kerryn Joseph A Dsilva",
+    "department": "Pharmaceutical Chemistry",
+    "title": "Associate Professor"
+  },
+  {
+    "number": 4,
+    "name": "Dushyanth Raj M M",
+    "department": "Pharmaceutical Chemistry",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 5,
+    "name": "Jeevitha L",
+    "department": "Pharmaceutical Chemistry",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 6,
+    "name": "Tanaji",
+    "department": "Pharmaceutical Chemistry",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 7,
+    "name": "Sankar Nagappa",
+    "department": "Pharmaceutical Chemistry",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 8,
+    "name": "Nandini H G M",
+    "department": "Pharmaceutical Chemistry",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 9,
+    "name": "Amithkumar B S",
+    "department": "Pharmaceutical Chemistry",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 10,
+    "name": "Devarakonda Subramanyam",
+    "department": "Pharmaceutical Chemistry",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 11,
+    "name": "Anil Kumar A P",
+    "department": "Pharmaceutics",
+    "title": "Associate Professor"
+  },
+  {
+    "number": 12,
+    "name": "Mahaveer Singh",
+    "department": "Pharmaceutics",
+    "title": "Associate Professor"
+  },
+  {
+    "number": 13,
+    "name": "Suresh N (PhD)",
+    "department": "Pharmaceutics",
+    "title": "Associate Professor & HOD"
+  },
+  {
+    "number": 14,
+    "name": "Abilasha T P",
+    "department": "Pharmaceutics",
+    "title": "Associate Professor"
+  },
+  {
+    "number": 15,
+    "name": "Anusha B H",
+    "department": "Pharmaceutics",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 16,
+    "name": "Kavya J P",
+    "department": "Pharmaceutics",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 17,
+    "name": "Rakesh B E",
+    "department": "Pharmaceutics",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 18,
+    "name": "Naveen Kumar N J",
+    "department": "Pharmaceutics",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 19,
+    "name": "Sinchana H J",
+    "department": "Pharmaceutics",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 20,
+    "name": "Aishwarya Kini M",
+    "department": "Pharmaceutics",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 21,
+    "name": "Priyanka K M (PhD)",
+    "department": "Pharmaceutics",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 22,
+    "name": "Shiva Chavhan H R",
+    "department": "Pharmaceutics",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 23,
+    "name": "Preethi Fernandiz",
+    "department": "Pharmacology",
+    "title": "Associate Professor & HOD"
+  },
+  {
+    "number": 24,
+    "name": "Sharadhi M",
+    "department": "Pharmacology",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 25,
+    "name": "Praveen Kumar C Sajjan",
+    "department": "Pharmacology",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 26,
+    "name": "Chandini B C",
+    "department": "Pharmacology",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 27,
+    "name": "Sumanth N R",
+    "department": "Pharmacology",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 28,
+    "name": "Vidya Banakar",
+    "department": "Pharmacology",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 29,
+    "name": "Dr. Shruty Bipin",
+    "department": "Pharmacology",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 30,
+    "name": "Hemalatha H T (PhD)",
+    "department": "Pharmacognosy",
+    "title": "Associate Professor & HOD"
+  },
+  {
+    "number": 31,
+    "name": "Rekha M",
+    "department": "Pharmacognosy",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 32,
+    "name": "Dr. Najeed S M",
+    "department": "Pharmacognosy",
+    "title": "Assistant Professor"
+  },
+  {
+    "number": 33,
+    "name": "Ankush D N",
+    "department": "Pharmacognosy",
+    "title": "Assistant Professor"
+  }
+]

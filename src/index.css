@@ -20,7 +20,7 @@
   --color-on-surface-variant: #454652;
   --color-surface-bright: #f8f9fa;
   --color-on-primary-fixed: #000767;
-  --color-outline: #767683;
+  --color-outline: #646473;
   --color-surface-container-lowest: #ffffff;
   --color-primary: #000666;
   --color-background: #f8f9fa;
@@ -58,6 +58,12 @@
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .clinical-gradient {
@@ -81,4 +87,43 @@ html {
 
 body {
   margin: 0;
+}
+
+@layer base {
+  body { font-family: var(--font-body); }
+  h1, h2, h3, h4, p { overflow-wrap: break-word; }
+  button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+  button:not(:disabled), select { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  :focus-visible { outline: 3px solid #008080; outline-offset: 4px; }
+  [id] { scroll-margin-top: 5.5rem; }
+}
+
+.glass-card { background: rgb(255 255 255 / 95%); backdrop-filter: blur(16px); }
+.home-hero { min-height: min(680px, 90svh); }
+.campus-map-layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: center; gap: 2rem; padding: 2rem; }
+.campus-map-frame { height: 360px; border-radius: 0.75rem; }
+.campus-map-card { min-width: 0; }
+.skip-link { position: fixed; top: 1rem; left: 1rem; z-index: 100; padding: 0.75rem 1rem; background: white; color: #000666; border-radius: 0.5rem; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+.enquiry-dialog { position: fixed; inset: 0; margin: auto; width: min(620px, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); padding: 0; border: 0; border-radius: 1rem; background: #f8f9fa; color: #191c1d; overflow-y: auto; overscroll-behavior: contain; box-shadow: 0 24px 80px #00066640; }
+.enquiry-dialog::backdrop { background: rgb(0 6 48 / 65%); backdrop-filter: blur(4px); }
+.enquiry-dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 1.25rem 1.5rem; background: #fff; position: sticky; top: 0; z-index: 1; }
+.enquiry-dialog-body { padding: 1.25rem 1.5rem 1.5rem; }
+.enquiry-form { display: grid; gap: 1rem; }
+.enquiry-form label { display: block; margin-bottom: 0.4rem; font-size: 0.875rem; font-weight: 600; color: #000666; }
+.enquiry-form input, .enquiry-form select, .enquiry-form textarea { width: 100%; min-height: 46px; padding: 0.65rem 0.875rem; font-size: 1rem; border: 1px solid #c6c5d4; border-radius: 0.5rem; background: white; }
+.enquiry-form textarea { resize: vertical; }
+.enquiry-form input:focus, .enquiry-form select:focus, .enquiry-form textarea:focus { outline: 2px solid #008080; outline-offset: 2px; }
+
+@media (max-width: 767px) {
+  .home-hero { min-height: auto; }
+  .campus-map-layout { grid-template-columns: minmax(0, 1fr); padding: 1.25rem; gap: 1rem; }
+  .campus-map-frame { height: 260px; }
+  .campus-map-card { grid-row: 1; }
+  .enquiry-dialog-header, .enquiry-dialog-body { padding: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
